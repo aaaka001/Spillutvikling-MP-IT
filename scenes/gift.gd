@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var fall_speed: float = 300.0
-@export var is_coal: bool = false
+@export var is_coal: bool = false #senere
 
 var area: Area2D
 
@@ -15,5 +15,5 @@ func _physics_process(delta: float) -> void:
 		queue_free()
 
 func _on_area_entered(other_area: Area2D) -> void:
-	if other_area.get_parent().name == "Reindeer":
-		queue_free()  # remove gift when caught
+	if other_area.get_parent().name == "gift":
+		queue_free()  

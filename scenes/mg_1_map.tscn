@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=4 uid="uid://5j3gevo2ua35"]
 
 [ext_resource type="Texture2D" uid="uid://cwcxtx4j5u41u" path="res://bakgr.png" id="1_utxpp"]
-[ext_resource type="PackedScene" uid="uid://couflduugxhfk" path="res://minigameScenes/first_mg.tscn" id="2_done4"]
-[ext_resource type="Script" uid="uid://bainn123pqfck" path="res://minigameScenes/spawner.gd" id="3_uwkpl"]
+[ext_resource type="PackedScene" uid="uid://couflduugxhfk" path="res://scenes/minigameScenes/first_mg.tscn" id="2_done4"]
+[ext_resource type="Script" uid="uid://bainn123pqfck" path="res://scenes/minigameScenes/spawner.gd" id="3_uwkpl"]
 [ext_resource type="PackedScene" uid="uid://dcehpx38hidjl" path="res://scenes/gift.tscn" id="4_ohlgw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_done4"]

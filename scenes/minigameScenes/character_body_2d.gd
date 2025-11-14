@@ -21,7 +21,7 @@ func _ready():
 func _on_catch_area_entered(area: Area2D) -> void:
 	print("Area entered by:", area.get_parent().name)
 
-	if area.get_parent().name == "Gift":
+	if area.get_parent().name == "gift":
 		held_gifts += 1
 		area.queue_free()  # remove the gift
 		print("Caught a gift! Total:", held_gifts)
