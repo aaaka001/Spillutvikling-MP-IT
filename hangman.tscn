@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwhlysi3lsos8"]
+
+[ext_resource type="Script" path="res://rich_text_label.gd" id="1_w3s1m"]
+[ext_resource type="Script" path="res://line_edit.gd" id="2_ilscd"]
+
+[sub_resource type="FontVariation" id="FontVariation_dkgme"]
+
+[sub_resource type="FontVariation" id="FontVariation_4jnlu"]
+base_font = SubResource("FontVariation_dkgme")
+
+[sub_resource type="Theme" id="Theme_cnhiv"]
+default_font = SubResource("FontVariation_4jnlu")
+/styles/bbCode = null
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kgr6n"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="Hangman" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 210.0
+offset_top = 269.0
+offset_right = 876.0
+offset_bottom = 338.0
+pivot_offset = Vector2(300, 0)
+theme = SubResource("Theme_cnhiv")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_kgr6n")
+bbcode_enabled = true
+text = "[center] hello"
+fit_content = true
+script = ExtResource("1_w3s1m")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 416.0
+offset_top = 393.0
+offset_right = 694.0
+offset_bottom = 442.0
+text = "Please enter your guess here"
+script = ExtResource("2_ilscd")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 535.0
+offset_top = 536.0
+offset_right = 849.0
+offset_bottom = 585.0
+text = "Please enter your guess here"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="text_changed" from="LineEdit" to="RichTextLabel" method="_on_line_edit_text_changed"]
