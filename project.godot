@@ -11,7 +11,11 @@ config_version=5
 [application]
 
 config/name="Nytt Spill-Prosjekt"
+<<<<<<< HEAD
 run/main_scene="uid://dv0mk1dhoglui"
+=======
+run/main_scene="uid://chp4ersqo7oe2"
+>>>>>>> 7ed9116e0f994f6c7fe97eed1614c69b8e9d2ffd
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
