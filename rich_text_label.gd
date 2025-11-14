@@ -5,7 +5,7 @@ var hideword = "_ "
 var hidden_word = hideword.repeat(len(selected_word));
 var guessed = false
 var forsøk = 5
-
+var guess = userGuess.guess
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,12 +14,17 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("enter"):
+	pass
+
+
+
+
+func _on_line_edit_text_submitted(new_text: String) -> void:
+		var split_guess = userGuess.text.split("")
+		print(split_guess)
 		print("guessed")
-		var guess = UserGuess.guess
+		for char in guess:
+				print(char)
+		
 		for i in range(len(selected_word)):
 			print(selected_word[i])
-
-
-func _on_line_edit_text_changed(new_text: String) -> void:
-	pass
