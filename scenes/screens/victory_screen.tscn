@@ -30,9 +30,9 @@ text = "Quit"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 454.0
+offset_left = 453.0
 offset_top = 123.0
-offset_right = 525.0
+offset_right = 524.0
 offset_bottom = 146.0
 scale = Vector2(2.4, 2.52)
 text = "You won!"
