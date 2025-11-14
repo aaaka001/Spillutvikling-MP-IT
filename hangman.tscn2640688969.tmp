@@ -55,13 +55,8 @@ script = ExtResource("1_w3s1m")
 
 [node name="healthbar" type="RichTextLabel" parent="generatedWord"]
 layout_mode = 0
-offset_left = -160.0
-offset_top = -230.0
-offset_right = 220.0
-offset_bottom = -140.0
-bbcode_enabled = true
-text = "asbut i
-"
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("2_od0u0")
 
 [node name="userInput" type="LineEdit" parent="."]

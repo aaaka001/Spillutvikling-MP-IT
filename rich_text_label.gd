@@ -4,7 +4,7 @@ var selected_word = global.randomword
 var hideword = "_ "
 var hidden_word = hideword.repeat(len(selected_word));
 var guessed = false
-var forsøk = 5
+var liv = 5
 var guess = userGuess.guess
 var letters = selected_word.split("")
 
@@ -27,8 +27,9 @@ func _process(delta: float) -> void:
 
 
 func _on_line_edit_text_submitted(new_text: String) -> void:
-	if guess != targetletter and guess != targetcomplete:
-		print("wrong")
-		forsøk -= 1
-		print(userGuess.guess)
+	if new_text != targetletter and new_text != targetcomplete:
+		print(new_text)
+		liv -= 1
+	if new_text == targetcomplete:
+		print("correct") 
 	
