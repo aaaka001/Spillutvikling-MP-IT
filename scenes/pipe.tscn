@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://do0f70ugnrgxa"]
 
-[ext_resource type="Texture2D" uid="uid://cj6g63gasdsvm" path="res://godot-placeholder.png" id="1_8x3ej"]
+[ext_resource type="Texture2D" uid="uid://cj6g63gasdsvm" path="res://assets/godot-placeholder.png" id="1_8x3ej"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_arpqm"]
 
