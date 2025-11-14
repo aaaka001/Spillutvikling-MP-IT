@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwhlysi3lsos8"]
+[gd_scene load_steps=7 format=3 uid="uid://oypspjxc60ww"]
 
 [ext_resource type="Script" path="res://rich_text_label.gd" id="1_w3s1m"]
 [ext_resource type="Script" path="res://line_edit.gd" id="2_ilscd"]
@@ -38,6 +38,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_left = 212.0
 offset_top = 262.0
 offset_right = 878.0
