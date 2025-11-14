@@ -11,15 +11,11 @@ config_version=5
 [application]
 
 config/name="Nytt Spill-Prosjekt"
-<<<<<<< HEAD
-run/main_scene="res://scenes/start_screen.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
-=======
-run/main_scene="uid://chp4ersqo7oe2"
->>>>>>> 7ed9116e0f994f6c7fe97eed1614c69b8e9d2ffd
+run/main_scene="uid://dv0mk1dhoglui"
 config/features=PackedStringArray("4.5", "Forward Plus")
 >>>>>>> 7ed9116e0f994f6c7fe97eed1614c69b8e9d2ffd
 config/icon="res://icon.svg"
+<<<<<<<HEADrun/main_scene="uid://dv0mk1dhoglui"
 
 [input]
 
