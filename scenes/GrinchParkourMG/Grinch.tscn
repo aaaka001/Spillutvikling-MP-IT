@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://fks2eswgtf25"]
 
-[ext_resource type="Script" uid="uid://mi08ew36axyr" path="res://grinch.gd" id="1_7jyay"]
+[ext_resource type="Script" uid="uid://mi08ew36axyr" path="res://scripts/grinch.gd" id="1_7jyay"]
 [ext_resource type="Texture2D" uid="uid://bg4cy8urwu08" path="res://assets/Placeholder.png" id="1_ufhuc"]
 
 [node name="Grinch" type="CharacterBody2D"]
