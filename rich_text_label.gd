@@ -23,8 +23,7 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 		var split_guess = userGuess.text.split("")
 		print(split_guess)
 		print("guessed")
-		for char in guess:
-				print(char)
+
 		
 		for i in range(len(selected_word)):
 			print(selected_word[i])
