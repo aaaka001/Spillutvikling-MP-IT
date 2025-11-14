@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://fks2eswgtf25"]
+
+[ext_resource type="Script" uid="uid://mi08ew36axyr" path="res://grinch.gd" id="1_7jyay"]
+[ext_resource type="Texture2D" uid="uid://bg4cy8urwu08" path="res://assets/Placeholder.png" id="1_ufhuc"]
+
+[node name="Grinch" type="CharacterBody2D"]
+script = ExtResource("1_7jyay")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(59, 41)
+scale = Vector2(0.3776596, 0.38636363)
+texture = ExtResource("1_ufhuc")
