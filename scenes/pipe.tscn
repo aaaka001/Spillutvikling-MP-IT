@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://do0f70ugnrgxa"]
+
+[ext_resource type="Texture2D" uid="uid://cj6g63gasdsvm" path="res://godot-placeholder.png" id="1_8x3ej"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_arpqm"]
+
+[node name="Pipe" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(51.999985, 588)
+rotation = 0.893016
+texture = ExtResource("1_8x3ej")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_arpqm")
