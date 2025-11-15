@@ -32,4 +32,9 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 		liv -= 1
 	if new_text == targetcomplete:
 		print("correct") 
+		text = targetcomplete
+	if new_text == targetletter:
+		print("correct") 
+		text = targetletter
+	
 	
