@@ -53,16 +53,14 @@ text = "[center] hello"
 fit_content = true
 script = ExtResource("1_w3s1m")
 
-[node name="healthbar" type="RichTextLabel" parent="generatedWord"]
+[node name="Label" type="Label" parent="generatedWord"]
 layout_mode = 0
-offset_left = -160.0
-offset_top = -230.0
-offset_right = 220.0
-offset_bottom = -140.0
-bbcode_enabled = true
-text = "asbut i
+offset_left = -8.0
+offset_top = -42.0
+offset_right = 32.0
+offset_bottom = -19.0
+text = "asd
 "
-script = ExtResource("2_od0u0")
 
 [node name="userInput" type="LineEdit" parent="."]
 layout_mode = 1
@@ -71,7 +69,7 @@ anchor_right = 1.07
 anchor_bottom = 3.279
 offset_left = 402.0
 offset_top = 368.0
-offset_right = 469.063
+offset_right = 470.5625
 offset_bottom = 399.0
 text = "Type here"
 placeholder_text = "Type here"
@@ -79,5 +77,16 @@ alignment = 1
 max_length = 100
 script = ExtResource("2_ilscd")
 
+[node name="healthbar" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 6.0
+offset_right = 400.0
+offset_bottom = 96.0
+bbcode_enabled = true
+text = "asbut i
+"
+script = ExtResource("2_od0u0")
+
 [connection signal="text_submitted" from="userInput" to="generatedWord" method="_on_line_edit_text_submitted"]
-[connection signal="text_submitted" from="userInput" to="generatedWord/healthbar" method="_on_user_input_text_submitted"]
+[connection signal="text_submitted" from="userInput" to="healthbar" method="_on_user_input_text_submitted"]
