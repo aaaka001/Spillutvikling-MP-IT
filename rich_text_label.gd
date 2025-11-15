@@ -31,5 +31,6 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 		print(new_text)
 		liv -= 1
 	if new_text == targetcomplete:
+		text = new_text
 		print("correct") 
 	
