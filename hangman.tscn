@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://oypspjxc60ww"]
 
-[ext_resource type="Script" uid="uid://desjt2tp0ruxa" path="res://rich_text_label.gd" id="1_w3s1m"]
-[ext_resource type="Script" uid="uid://kil6hqg5rc8" path="res://line_edit.gd" id="2_ilscd"]
-[ext_resource type="Script" uid="uid://7jify8j4wcff" path="res://healthbar.gd" id="2_od0u0"]
+[ext_resource type="Script" uid="uid://desjt2tp0ruxa" path="res://hangman/rich_text_label.gd" id="1_w3s1m"]
+[ext_resource type="Script" uid="uid://kil6hqg5rc8" path="res://hangman/line_edit.gd" id="2_ilscd"]
+[ext_resource type="Script" uid="uid://7jify8j4wcff" path="res://hangman/healthbar.gd" id="2_od0u0"]
 
 [sub_resource type="FontVariation" id="FontVariation_dkgme"]
 
@@ -79,10 +79,10 @@ script = ExtResource("2_ilscd")
 
 [node name="healthbar" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 6.0
-offset_right = 400.0
-offset_bottom = 96.0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 388.0
+offset_bottom = 93.0
 bbcode_enabled = true
 text = "asbut i
 "
