@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx8umn6mmqqsf"]
+
+[ext_resource type="Texture2D" uid="uid://cj6g63gasdsvm" path="res://assets/godot-placeholder.png" id="1_yrnqu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hkdav"]
+size = Vector2(186, 147)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yrnqu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_hkdav")
+
+[node name="Snøballkaster" type="Node2D" parent="."]
+
+[node name="Kaster" type="Sprite2D" parent="Snøballkaster"]
