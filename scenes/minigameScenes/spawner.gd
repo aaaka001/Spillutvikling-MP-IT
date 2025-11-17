@@ -22,4 +22,6 @@ func spawn_gift() -> void:
 	var gift = gift_scene.instantiate()
 	var x = randf_range(0, screen_width)
 	gift.position = Vector2(x, -50)
-	get_parent().add_child(gift)  # add gift to same scene as player
+	get_parent().add_child(gift)  
+	
+	gift.fall_speed *= Global.gift_speed_multiplier

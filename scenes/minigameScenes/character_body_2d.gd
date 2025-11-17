@@ -17,15 +17,23 @@ func get_input():
 func _ready():
 	catch_area = get_node("Sprite/CatchArea")
 	catch_area.connect("area_entered", Callable(self, "_on_catch_area_entered"))
+
+
 	
 func _on_catch_area_entered(area: Area2D) -> void:
-
-	print("Area entered by:", area.get_parent().name)
-
-	if area.get_parent().name == "gift":
+	var gift = area.get_parent()
+	if gift.is_in_group("gift"):
 		held_gifts += 1
-		area.queue_free()  
+		gift.queue_free()
 		print("Caught a gift! Total:", held_gifts)
+		Global.add_score(1)
+		
+		if held_gifts % 10 == 0:
+			print("Speed increased")
+			Global.gift_speed_multiplier *= 1.2
+
+		
+
 
 
 func _physics_process(delta):
