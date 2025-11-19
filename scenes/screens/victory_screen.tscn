@@ -36,3 +36,6 @@ offset_right = 524.0
 offset_bottom = 146.0
 scale = Vector2(2.4, 2.52)
 text = "You won!"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(544, 312)
