@@ -1,3 +1,5 @@
 [gd_scene format=3 uid="uid://t1he8bm2clrn"]
 
-[node name="Snøballene" type="Node2D"]
+[node name="RigidBody2D" type="RigidBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://cx8umn6mmqqsf"]
+[gd_scene load_steps=6 format=3 uid="uid://cx8umn6mmqqsf"]
 
+[ext_resource type="Script" uid="uid://couqcwmghkjfx" path="res://scenes/FourthMinigame/fourth_minigame.gd" id="1_kvqsu"]
 [ext_resource type="Texture2D" uid="uid://cj6g63gasdsvm" path="res://assets/godot-placeholder.png" id="1_yrnqu"]
+[ext_resource type="Script" uid="uid://bqtd22u6x1y0d" path="res://scenes/FourthMinigame/snøballkaster.gd" id="3_wprly"]
+[ext_resource type="Texture2D" uid="uid://c63csanhc8nsj" path="res://scenes/FourthMinigame/tanks-simple.png" id="4_4a0af"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hkdav"]
 size = Vector2(186, 147)
 
 [node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_kvqsu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_yrnqu")
@@ -15,5 +19,11 @@ position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_hkdav")
 
 [node name="Snøballkaster" type="Node2D" parent="."]
+script = ExtResource("3_wprly")
 
 [node name="Kaster" type="Sprite2D" parent="Snøballkaster"]
+position = Vector2(114.99999, 2.9999943)
+rotation = -1.600452
+texture = ExtResource("4_4a0af")
+region_enabled = true
+region_rect = Rect2(115, 13, 24, 60)
