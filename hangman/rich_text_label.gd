@@ -40,9 +40,9 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 	
 	
 	if new_text != targetletter and new_text != targetcomplete and len(new_text) <= word_length:
-		print(new_text)
+		print(new_text)	
 		liv -= 1
-	if len(new_text) != word_length:
+	if len(new_text) >= word_length:
 		print("NO")
 	if new_text == targetcomplete:
 		text = new_text

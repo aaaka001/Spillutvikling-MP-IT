@@ -1,8 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://oypspjxc60ww"]
+[gd_scene load_steps=11 format=3 uid="uid://oypspjxc60ww"]
 
+[ext_resource type="Texture2D" uid="uid://kccgw2h3pmdr" path="res://hangman/julenisse_init.png" id="1_j8mr7"]
 [ext_resource type="Script" uid="uid://desjt2tp0ruxa" path="res://hangman/rich_text_label.gd" id="1_w3s1m"]
 [ext_resource type="Script" uid="uid://kil6hqg5rc8" path="res://hangman/line_edit.gd" id="2_ilscd"]
 [ext_resource type="Script" uid="uid://7jify8j4wcff" path="res://hangman/healthbar.gd" id="2_od0u0"]
+[ext_resource type="Texture2D" uid="uid://istvt1ns41kd" path="res://hangman/Skjermbilde_2025-11-18_kl._10.36.06-removebg-preview.png" id="5_j8mr7"]
+[ext_resource type="Script" uid="uid://mmpm7ywupcg4" path="res://sprite_2d.gd" id="6_12a47"]
 
 [sub_resource type="FontVariation" id="FontVariation_dkgme"]
 
@@ -37,6 +40,14 @@ offset_right = -1154.0
 offset_bottom = -646.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -132.0
+offset_top = 1.0
+offset_right = 1154.0
+offset_bottom = 647.0
+texture = ExtResource("1_j8mr7")
 
 [node name="generatedWord" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -79,14 +90,20 @@ script = ExtResource("2_ilscd")
 
 [node name="healthbar" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 3.0
-offset_right = 388.0
-offset_bottom = 93.0
+offset_left = 72.0
+offset_top = 2.0
+offset_right = 452.0
+offset_bottom = 92.0
+theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
-text = "asbut i
-"
+text = "Liv"
 script = ExtResource("2_od0u0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(39, 41.999996)
+scale = Vector2(0.14941405, 0.21721311)
+texture = ExtResource("5_j8mr7")
+script = ExtResource("6_12a47")
 
 [connection signal="text_submitted" from="userInput" to="generatedWord" method="_on_line_edit_text_submitted"]
 [connection signal="text_submitted" from="userInput" to="healthbar" method="_on_user_input_text_submitted"]
