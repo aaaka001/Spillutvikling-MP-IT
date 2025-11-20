@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://oypspjxc60ww"]
+[gd_scene load_steps=12 format=3 uid="uid://d2d4ljsgrx5da"]
 
 [ext_resource type="Texture2D" uid="uid://kccgw2h3pmdr" path="res://hangman/julenisse_init.png" id="1_j8mr7"]
 [ext_resource type="Script" uid="uid://desjt2tp0ruxa" path="res://hangman/rich_text_label.gd" id="1_w3s1m"]
 [ext_resource type="Script" uid="uid://kil6hqg5rc8" path="res://hangman/line_edit.gd" id="2_ilscd"]
+[ext_resource type="FontFile" uid="uid://m7mumfnrf4es" path="res://Font/Minecraft.ttf" id="2_imtdw"]
 [ext_resource type="Script" uid="uid://7jify8j4wcff" path="res://hangman/healthbar.gd" id="2_od0u0"]
 [ext_resource type="Texture2D" uid="uid://istvt1ns41kd" path="res://hangman/Skjermbilde_2025-11-18_kl._10.36.06-removebg-preview.png" id="5_j8mr7"]
 [ext_resource type="Script" uid="uid://mmpm7ywupcg4" path="res://sprite_2d.gd" id="6_12a47"]
@@ -40,23 +41,25 @@ offset_right = -1154.0
 offset_bottom = -646.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_horizontal_guides_ = [-73.0]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -132.0
-offset_top = 1.0
-offset_right = 1154.0
-offset_bottom = 647.0
+offset_left = -147.0
+offset_top = -1.0
+offset_right = 1148.0
+offset_bottom = 645.0
 texture = ExtResource("1_j8mr7")
 
 [node name="generatedWord" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 212.0
-offset_top = 262.0
-offset_right = 878.0
-offset_bottom = 331.0
+offset_left = 216.0
+offset_top = 231.0
+offset_right = 882.0
+offset_bottom = 300.0
 pivot_offset = Vector2(300, 0)
 theme = SubResource("Theme_cnhiv")
+theme_override_fonts/normal_font = ExtResource("2_imtdw")
 theme_override_font_sizes/normal_font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_kgr6n")
 bbcode_enabled = true
@@ -64,24 +67,17 @@ text = "[center] hello"
 fit_content = true
 script = ExtResource("1_w3s1m")
 
-[node name="Label" type="Label" parent="generatedWord"]
-layout_mode = 0
-offset_left = -8.0
-offset_top = -42.0
-offset_right = 32.0
-offset_bottom = -19.0
-text = "asd
-"
-
 [node name="userInput" type="LineEdit" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.07
 anchor_bottom = 3.279
-offset_left = 402.0
-offset_top = 368.0
-offset_right = 470.5625
-offset_bottom = 399.0
+offset_left = 467.0
+offset_top = 326.0
+offset_right = 666.0
+offset_bottom = 365.0
+theme_override_fonts/font = ExtResource("2_imtdw")
+theme_override_font_sizes/font_size = 22
 text = "Type here"
 placeholder_text = "Type here"
 alignment = 1
@@ -90,13 +86,16 @@ script = ExtResource("2_ilscd")
 
 [node name="healthbar" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 72.0
-offset_top = 2.0
-offset_right = 452.0
-offset_bottom = 92.0
+offset_left = -75.0
+offset_top = 7.0
+offset_right = 305.0
+offset_bottom = 97.0
+theme_override_fonts/normal_font = ExtResource("2_imtdw")
 theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
 text = "Liv"
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("2_od0u0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
