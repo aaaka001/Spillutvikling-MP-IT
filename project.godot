@@ -16,6 +16,12 @@ config/features=PackedStringArray("4.5", "Forward Plus")
 >>>>>>>7ed9116e0f994f6c7fe97eed1614c69b8e9d2ffdconfig/icon="res://icon.svg"
 <<<<<<<HEADrun/main_scene="uid://dv0mk1dhoglui"
 
+[file_customization]
+
+folder_colors={
+"res://scenes/GrinchParkourMG/": "green"
+}
+
 [input]
 
 left={
