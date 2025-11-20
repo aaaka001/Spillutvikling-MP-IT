@@ -1,16 +1,54 @@
-[gd_scene load_steps=3 format=3 uid="uid://dr8rrklxw2nxl"]
+[gd_scene load_steps=6 format=3 uid="uid://dr8rrklxw2nxl"]
 
 [ext_resource type="PackedScene" uid="uid://d2aclot747p23" path="res://scenes/GrinchParkourMG/Player.tscn" id="1_jlb33"]
+[ext_resource type="Texture2D" uid="uid://djt4d8g136moi" path="res://assets/Screenshot 2025-11-20 at 10.32.05.png" id="1_qg6j6"]
 [ext_resource type="PackedScene" uid="uid://fks2eswgtf25" path="res://scenes/GrinchParkourMG/Grinch.tscn" id="2_qg6j6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ur2sy"]
+size = Vector2(80, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53h3h"]
+size = Vector2(145.34077, 140.4281)
 
 [node name="ParkourLevel" type="Node2D"]
 
+[node name="Hindring" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Hindring"]
+position = Vector2(338, 274.5)
+scale = Vector2(0.26708075, 0.40972224)
+texture = ExtResource("1_qg6j6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hindring"]
+position = Vector2(339, 274.5)
+shape = SubResource("RectangleShape2D_ur2sy")
+
+[node name="Hindring2" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Hindring2"]
+position = Vector2(489, 256.61993)
+scale = Vector2(0.26708075, 0.9669435)
+texture = ExtResource("1_qg6j6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hindring2"]
+position = Vector2(490, 256.61993)
+scale = Vector2(1, 2.3599975)
+shape = SubResource("RectangleShape2D_ur2sy")
+
 [node name="Player" parent="." instance=ExtResource("1_jlb33")]
-position = Vector2(161, 215)
+position = Vector2(157, 240)
 
 [node name="Grinch" parent="." instance=ExtResource("2_qg6j6")]
-position = Vector2(22, 212)
+position = Vector2(-4, 224)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Ground" type="StaticBody2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Ground"]
+position = Vector2(537, 329)
+scale = Vector2(3.3049798, -0.33744448)
+texture = ExtResource("1_qg6j6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(534.8294, 326.3745)
+scale = Vector2(7.2542706, -0.30441967)
+shape = SubResource("RectangleShape2D_53h3h")
