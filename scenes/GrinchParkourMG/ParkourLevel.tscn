@@ -10,3 +10,7 @@ position = Vector2(161, 215)
 
 [node name="Grinch" parent="." instance=ExtResource("2_qg6j6")]
 position = Vector2(22, 212)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
