@@ -12,26 +12,26 @@ size = Vector2(145.34077, 140.4281)
 
 [node name="ParkourLevel" type="Node2D"]
 
-[node name="Hindring" type="Area2D" parent="."]
+[node name="Hindring" type="StaticBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Hindring"]
-position = Vector2(338, 274.5)
+position = Vector2(435, 275.5)
 scale = Vector2(0.26708075, 0.40972224)
 texture = ExtResource("1_qg6j6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hindring"]
-position = Vector2(339, 274.5)
+position = Vector2(436, 275.5)
 shape = SubResource("RectangleShape2D_ur2sy")
 
-[node name="Hindring2" type="Area2D" parent="."]
+[node name="Hindring2" type="StaticBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Hindring2"]
-position = Vector2(489, 256.61993)
+position = Vector2(563, 256.61993)
 scale = Vector2(0.26708075, 0.9669435)
 texture = ExtResource("1_qg6j6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hindring2"]
-position = Vector2(490, 256.61993)
+position = Vector2(564, 256.61993)
 scale = Vector2(1, 2.3599975)
 shape = SubResource("RectangleShape2D_ur2sy")
 
