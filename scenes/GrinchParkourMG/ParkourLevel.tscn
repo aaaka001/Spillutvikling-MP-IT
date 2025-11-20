@@ -35,12 +35,6 @@ position = Vector2(564, 256.61993)
 scale = Vector2(1, 2.3599975)
 shape = SubResource("RectangleShape2D_ur2sy")
 
-[node name="Player" parent="." instance=ExtResource("1_jlb33")]
-position = Vector2(157, 240)
-
-[node name="Grinch" parent="." instance=ExtResource("2_qg6j6")]
-position = Vector2(-4, 224)
-
 [node name="Ground" type="StaticBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground"]
@@ -52,3 +46,9 @@ texture = ExtResource("1_qg6j6")
 position = Vector2(534.8294, 326.3745)
 scale = Vector2(7.2542706, -0.30441967)
 shape = SubResource("RectangleShape2D_53h3h")
+
+[node name="Grinch" parent="." instance=ExtResource("2_qg6j6")]
+position = Vector2(-4, 224)
+
+[node name="Player" parent="." instance=ExtResource("1_jlb33")]
+position = Vector2(157, 240)
