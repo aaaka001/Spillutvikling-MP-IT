@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://5j3gevo2ua35"]
+[gd_scene load_steps=10 format=4 uid="uid://5j3gevo2ua35"]
 
 [ext_resource type="Texture2D" uid="uid://cwcxtx4j5u41u" path="res://bakgr.png" id="1_utxpp"]
 [ext_resource type="PackedScene" uid="uid://couflduugxhfk" path="res://scenes/minigameScenes/first_mg.tscn" id="2_done4"]
 [ext_resource type="Script" uid="uid://bainn123pqfck" path="res://scenes/minigameScenes/spawner.gd" id="3_uwkpl"]
+[ext_resource type="PackedScene" uid="uid://3w2e6dx201hl" path="res://scenes/coal.tscn" id="4_5kmio"]
 [ext_resource type="PackedScene" uid="uid://dcehpx38hidjl" path="res://scenes/gift.tscn" id="4_ohlgw"]
 [ext_resource type="Script" uid="uid://dfqox4gcmgokc" path="res://scenes/label.gd" id="5_uaub4"]
 
@@ -49,6 +50,7 @@ shape = SubResource("RectangleShape2D_done4")
 
 [node name="Spawner" type="Node2D" parent="."]
 script = ExtResource("3_uwkpl")
+coal_scene = ExtResource("4_5kmio")
 gift_scene = ExtResource("4_ohlgw")
 
 [node name="score" type="Label" parent="."]

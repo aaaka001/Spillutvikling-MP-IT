@@ -16,11 +16,15 @@ func get_input():
 		
 func _ready():
 	catch_area = get_node("Sprite/CatchArea")
+	#catch_areaCoal = get_node("Sprite/CatchArea")
 	catch_area.connect("area_entered", Callable(self, "_on_catch_area_entered"))
+	#catch_areaCoal.connect("area_entered", Callable(self, "_on_catch_area_entered"))
 
 
 	
 func _on_catch_area_entered(area: Area2D) -> void:
+	var item = area.get_parent() 
+
 	var gift = area.get_parent()
 	if gift.is_in_group("gift"):
 		held_gifts += 1
@@ -32,7 +36,15 @@ func _on_catch_area_entered(area: Area2D) -> void:
 			print("Speed increased")
 			Global.gift_speed_multiplier *= 1.2
 
+	elif item.is_in_group("coal"):
+		item.queue_free()
+		handle_coal_hit()
 		
+
+func handle_coal_hit():
+	print("Uff, you got a COAL")
+	held_gifts = max(held_gifts - 1, 0)
+	Global.add_score(-1)
 
 
 
