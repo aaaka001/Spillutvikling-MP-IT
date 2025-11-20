@@ -91,7 +91,8 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_pn7wg")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_0m60l")
 theme_override_styles/hover = SubResource("StyleBoxFlat_73fcp")
-text = "First minigame"
+text = "Gift Run!
+-Aayan"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 1
