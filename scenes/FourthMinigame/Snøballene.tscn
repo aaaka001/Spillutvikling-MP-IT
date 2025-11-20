@@ -1,5 +1,23 @@
-[gd_scene format=3 uid="uid://t1he8bm2clrn"]
+[gd_scene load_steps=4 format=3 uid="uid://t1he8bm2clrn"]
+
+[ext_resource type="Script" uid="uid://bmuidcjxpxhsn" path="res://scenes/FourthMinigame/snøballene.gd" id="1_bg70i"]
+[ext_resource type="Texture2D" uid="uid://c63csanhc8nsj" path="res://scenes/FourthMinigame/tanks-simple.png" id="2_xrqkf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vbljc"]
+radius = 124.26638
 
 [node name="RigidBody2D" type="RigidBody2D"]
+script = ExtResource("1_bg70i")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(61.999996, 36)
+rotation = 1.5659841
+scale = Vector2(2.4967735, 3.3861773)
+texture = ExtResource("2_xrqkf")
+region_enabled = true
+region_rect = Rect2(199, 27, 24, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(79, 38)
+scale = Vector2(0.33815694, 0.25126883)
+shape = SubResource("CircleShape2D_vbljc")
