@@ -14,4 +14,4 @@ func _on_menu_pressed():
 
 
 func _on_quit_pressed():
-	get_tree().quit()
+	pass

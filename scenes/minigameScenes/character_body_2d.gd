@@ -4,9 +4,10 @@ extends CharacterBody2D
 @export var jump_velocity: float = -300.0
 @export var gravity: float = 800.0
 var held_gifts: int = 0
-var catch_area: Area2D
+# var catch_area: Area2D
+@onready var catch_area = $CharacterBody2D/Sprite/CatchArea
 @export var speedmulti = 1.08
-
+var timeleft = 1200
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "ui_up", "ui_down").x
@@ -16,10 +17,11 @@ func get_input():
 		velocity.y = jump_velocity
 		
 func _ready():
-	catch_area = get_node("Sprite/CatchArea")
+	print(catch_area)
 	#catch_areaCoal = get_node("Sprite/CatchArea")
 	catch_area.connect("area_entered", Callable(self, "_on_catch_area_entered"))
 	#catch_areaCoal.connect("area_entered", Callable(self, "_on_catch_area_entered"))
+	 
 
 
 	
@@ -51,6 +53,14 @@ func handle_coal_hit():
 
 
 func _physics_process(delta):
+	timeleft -= 1
+	
+	if timeleft == 0:
+		get_tree().change_scene_to_file("res://scenes/screens/victory_screen.tscn")
+	
+	if held_gifts >= 20:
+		pass
+	#	change.scene
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
