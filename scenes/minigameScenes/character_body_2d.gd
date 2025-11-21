@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var gravity: float = 800.0
 var held_gifts: int = 0
 var catch_area: Area2D
+@export var speedmulti: float = 1.12
 
 
 func get_input():
@@ -15,6 +16,7 @@ func get_input():
 		velocity.y = jump_velocity
 		
 func _ready():
+
 	catch_area = get_node("Sprite/CatchArea")
 	#catch_areaCoal = get_node("Sprite/CatchArea")
 	catch_area.connect("area_entered", Callable(self, "_on_catch_area_entered"))
@@ -35,6 +37,7 @@ func _on_catch_area_entered(area: Area2D) -> void:
 		if held_gifts % 10 == 0:
 			print("Speed increased")
 			Global.gift_speed_multiplier *= 1.2
+			speed = speed * speedmulti
 
 	elif item.is_in_group("coal"):
 		item.queue_free()
@@ -45,6 +48,10 @@ func handle_coal_hit():
 	print("Uff, you got a COAL")
 	held_gifts = max(held_gifts - 1, 0)
 	Global.add_score(-1)
+	
+func _on_timer_timeout() -> void:
+	get_tree().change_scene_to_file("res://scenes/screens/victory_screen.tscn")
+	
 
 
 
