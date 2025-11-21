@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://bainn123pqfck" path="res://scenes/minigameScenes/spawner.gd" id="3_oeudc"]
 [ext_resource type="PackedScene" uid="uid://3w2e6dx201hl" path="res://scenes/coal.tscn" id="4_q25p4"]
 [ext_resource type="PackedScene" uid="uid://dcehpx38hidjl" path="res://scenes/gift.tscn" id="5_iux6t"]
-[ext_resource type="Script" uid="uid://dfqox4gcmgokc" path="res://scenes/label.gd" id="6_xjeuy"]
+[ext_resource type="Script" path="res://scenes/label.gd" id="6_xjeuy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4esan"]
 texture = ExtResource("1_11cdo")
