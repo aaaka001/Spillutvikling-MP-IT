@@ -48,7 +48,8 @@ scale = Vector2(7.2542706, -0.30441967)
 shape = SubResource("RectangleShape2D_53h3h")
 
 [node name="Grinch" parent="." instance=ExtResource("2_qg6j6")]
-position = Vector2(-4, 224)
+modulate = Color(0.38380194, 4.813075e-06, 0.2679066, 1)
+position = Vector2(27, 226)
 
 [node name="Player" parent="." instance=ExtResource("1_jlb33")]
-position = Vector2(157, 240)
+position = Vector2(186, 232)
