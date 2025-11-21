@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dr8rrklxw2nxl"]
 
 [ext_resource type="PackedScene" uid="uid://d2aclot747p23" path="res://scenes/GrinchParkourMG/Player.tscn" id="1_jlb33"]
-[ext_resource type="Texture2D" uid="uid://djt4d8g136moi" path="res://assets/Screenshot 2025-11-20 at 10.32.05.png" id="1_qg6j6"]
+[ext_resource type="Texture2D" uid="uid://djt4d8g136moi" path="res://assets/Blokk.png" id="1_qg6j6"]
 [ext_resource type="PackedScene" uid="uid://fks2eswgtf25" path="res://scenes/GrinchParkourMG/Grinch.tscn" id="2_qg6j6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ur2sy"]
