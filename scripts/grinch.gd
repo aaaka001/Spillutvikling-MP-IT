@@ -13,10 +13,12 @@ var player
 
 
 func _ready():
-	# Find the player anywhere in the currently loaded scene
-	player = get_tree().current_scene.find_node("Player", true, false)
-	if not player:
-		print("Grinch: Player node not found!")
+	# Safely find the player using group "player"
+	var players = get_tree().get_nodes_in_group("player")
+	if players.size() > 0:
+		player = players[0]
+	else:
+		print("Grinch: Player not found! Make sure the Player node is in group 'player'")
 
 
 func _physics_process(delta):
@@ -92,3 +94,4 @@ func _platform_above() -> bool:
 
 	var result = get_world_2d().direct_space_state.intersect_ray(q)
 	return result.size() > 0
+  
