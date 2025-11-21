@@ -4,13 +4,12 @@ extends CharacterBody2D
 @export var jump_force := -350.0
 @export var gravity := 900.0
 
-# How far ahead to check for obstacles/platforms
 @export var forward_check := 20.0
 @export var ledge_check_distance := 20.0
 @export var platform_check_height := 25.0
 
 var player
-
+@onready var anim = $AnimatedSprite2D  # AnimatedSprite2D reference
 
 func _ready():
 	# Safely find the player using group "player"
@@ -34,18 +33,27 @@ func _physics_process(delta):
 		velocity.x = -speed
 
 	# ------------------------------
+	#   ANIMATION
+	# ------------------------------
+	if velocity.x != 0:
+		# Only play "run" if it's not already playing
+		if anim.animation != "run":
+			anim.play("run")
+	else:
+		anim.stop()
+		anim.frame = 0
+
+
+
+
+
+	# ------------------------------
 	#   PARKOUR LOGIC
 	# ------------------------------
-
-	# 1. Jump over walls
 	if is_on_floor() and _obstacle_in_front():
 		velocity.y = jump_force
-
-	# 2. Jump up onto platforms
 	elif is_on_floor() and _platform_above():
 		velocity.y = jump_force
-
-	# 3. Jump across gaps/ledges
 	elif is_on_floor() and _ledge_ahead():
 		velocity.y = jump_force
 
@@ -94,4 +102,3 @@ func _platform_above() -> bool:
 
 	var result = get_world_2d().direct_space_state.intersect_ray(q)
 	return result.size() > 0
-  

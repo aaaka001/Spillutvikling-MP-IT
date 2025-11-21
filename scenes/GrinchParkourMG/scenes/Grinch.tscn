@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://fks2eswgtf25"]
+
+[ext_resource type="Script" uid="uid://dk0tkeo34ucbx" path="res://scenes/GrinchParkourMG/scripts/player.gd" id="1_7jyay"]
+[ext_resource type="Texture2D" uid="uid://2nshxd83wqeb" path="res://scenes/GrinchParkourMG/assets/grinch-sprite-sheet.png" id="2_fh8e3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4tcex"]
+size = Vector2(341, 375)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pv5ln"]
+atlas = ExtResource("2_fh8e3")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0w1ue"]
+atlas = ExtResource("2_fh8e3")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7asvh"]
+atlas = ExtResource("2_fh8e3")
+region = Rect2(0, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7xum"]
+atlas = ExtResource("2_fh8e3")
+region = Rect2(512, 512, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fcrui"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pv5ln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0w1ue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7asvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7xum")
+}],
+"loop": true,
+"name": &"run",
+"speed": 7.0
+}]
+
+[node name="Grinch" type="CharacterBody2D"]
+script = ExtResource("1_7jyay")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(53.5, 20.5)
+shape = SubResource("RectangleShape2D_4tcex")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fcrui")
+animation = &"run"
+frame = 3
