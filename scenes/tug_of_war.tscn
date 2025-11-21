@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://d248wygpovlhx"]
+[gd_scene load_steps=5 format=3 uid="uid://dhd7wmmrvgovy"]
 
 [ext_resource type="Texture2D" uid="uid://c4cxvi3axhyf8" path="res://tug_of_war/output.jpg" id="1_ip278"]
 [ext_resource type="Texture2D" uid="uid://0my2gns1wnk" path="res://tug_of_war/santa_pulling_png.png" id="2_pfdao"]
