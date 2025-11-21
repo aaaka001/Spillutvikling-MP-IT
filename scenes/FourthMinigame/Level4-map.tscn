@@ -1,29 +1,9 @@
-[gd_scene load_steps=5 format=4 uid="uid://cenfpbm2ih4ls"]
+[gd_scene load_steps=3 format=4 uid="uid://cenfpbm2ih4ls"]
 
-[ext_resource type="Texture2D" uid="uid://di0jlui60xv36" path="res://scenes/FourthMinigame/tanks-terrain.png" id="1_qjup7"]
 [ext_resource type="PackedScene" uid="uid://cx8umn6mmqqsf" path="res://scenes/FourthMinigame/fourthMinigame.tscn" id="2_huqs4"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_huqs4"]
-texture = ExtResource("1_qjup7")
-texture_region_size = Vector2i(128, 128)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_n0kml"]
 tile_size = Vector2i(128, 128)
-sources/0 = SubResource("TileSetAtlasSource_huqs4")
 
 [node name="Level4Map" type="Node2D"]
 
@@ -32,4 +12,4 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAA
 tile_set = SubResource("TileSet_n0kml")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_huqs4")]
-position = Vector2(29, 26)
+position = Vector2(509, 104)
