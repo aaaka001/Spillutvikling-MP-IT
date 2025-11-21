@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://blo6j0hhofxge"]
+
+[ext_resource type="Texture2D" uid="uid://cj6g63gasdsvm" path="res://assets/godot-placeholder.png" id="1_k5pvd"]
+
+[node name="Sprite2D" type="Sprite2D"]
+
+[node name="GodotPlaceholder" type="Sprite2D" parent="."]
+position = Vector2(965, 959)
+texture = ExtResource("1_k5pvd")

@@ -38,4 +38,6 @@ scale = Vector2(2.4, 2.52)
 text = "You won!"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(544, 312)
+position = Vector2(600, 326)
+
+[connection signal="pressed" from="VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
