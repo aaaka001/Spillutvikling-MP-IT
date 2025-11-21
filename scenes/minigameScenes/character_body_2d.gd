@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var gravity: float = 800.0
 var held_gifts: int = 0
 var catch_area: Area2D
+@export var speedmulti = 1.08
 
 
 func get_input():
@@ -35,7 +36,8 @@ func _on_catch_area_entered(area: Area2D) -> void:
 		if held_gifts % 10 == 0:
 			print("Speed increased")
 			Global.gift_speed_multiplier *= 1.2
-
+			speed *= speedmulti
+			
 	elif item.is_in_group("coal"):
 		item.queue_free()
 		handle_coal_hit()

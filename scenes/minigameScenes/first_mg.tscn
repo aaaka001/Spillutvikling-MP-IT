@@ -11,7 +11,7 @@ size = Vector2(217.24773, 200.52295)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kg7cr"]
 size = Vector2(149, 121)
 
-[node name="Root" type="Node2D"]
+[node name="PLayer" type="Node2D"]
 script = SubResource("GDScript_kg7cr")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
