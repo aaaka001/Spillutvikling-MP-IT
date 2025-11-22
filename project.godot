@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Nytt Spill-Prosjekt"
-run/main_scene="res://scenes/tug_of_war.tscn"
+run/main_scene="res://tug_of_war/tug_of_war.tscn"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 >>>>>>>7ed9116e0f994f6c7fe97eed1614c69b8e9d2ffdconfig/icon="res://icon.svg"
@@ -21,6 +21,12 @@ config/icon="res://icon.svg"
 
 global="*res://hangman/global.gd"
 userGuess="*res://hangman/line_edit.gd"
+tug="*res://tug_of_war/tug.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [input]
 
