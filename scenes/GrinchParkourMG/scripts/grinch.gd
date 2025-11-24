@@ -20,7 +20,8 @@ func _ready():
 		print("Grinch: Player not found! Make sure the Player node is in group 'player'")
 
 
-func _physics_process(delta):
+
+
 	if not player:
 		return
 
