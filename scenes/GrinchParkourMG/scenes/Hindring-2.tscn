@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://diu70k4txtn30" path="res://scenes/GrinchParkourMG/assets/Hindringer.png" id="1_j2mhb"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nifna"]
-size = Vector2(131, 102.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5i55"]
+size = Vector2(128, 106)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvvga"]
-size = Vector2(17.729557, 82.45072)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2mhb"]
+size = Vector2(22.315498, 61.838043)
 
 [node name="Hindring 2" type="StaticBody2D"]
 
@@ -18,13 +18,13 @@ region_enabled = true
 region_rect = Rect2(477.60803, 323.65646, 221.90277, 158.89334)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(53.5, -2.25)
-shape = SubResource("RectangleShape2D_nifna")
+position = Vector2(54, -3)
+shape = SubResource("RectangleShape2D_w5i55")
 
 [node name="Trigger" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger"]
-position = Vector2(-22.384377, -6)
+position = Vector2(-17, -1)
 scale = Vector2(2.0999537, 1.5039287)
-shape = SubResource("RectangleShape2D_uvvga")
+shape = SubResource("RectangleShape2D_j2mhb")
 debug_color = Color(0.5606997, 0.43625003, 0.90377754, 0.41960785)

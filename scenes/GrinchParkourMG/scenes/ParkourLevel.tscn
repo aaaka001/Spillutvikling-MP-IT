@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dr8rrklxw2nxl"]
+[gd_scene load_steps=7 format=3 uid="uid://dr8rrklxw2nxl"]
 
 [ext_resource type="PackedScene" uid="uid://d2aclot747p23" path="res://scenes/GrinchParkourMG/scenes/Player.tscn" id="1_jlb33"]
 [ext_resource type="PackedScene" uid="uid://fks2eswgtf25" path="res://scenes/GrinchParkourMG/scenes/Grinch.tscn" id="2_qg6j6"]
 [ext_resource type="Texture2D" uid="uid://i1wmoj34nr0k" path="res://scenes/GrinchParkourMG/assets/bakgrunn.png" id="4_827iy"]
+[ext_resource type="PackedScene" uid="uid://bu8mxo6vfblc4" path="res://scenes/GrinchParkourMG/scenes/Hindring-1.tscn" id="4_oji4g"]
+[ext_resource type="PackedScene" uid="uid://b0q3scib3jp3d" path="res://scenes/GrinchParkourMG/scenes/Hindring-2.tscn" id="5_oji4g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53h3h"]
 size = Vector2(132.68275, 140.4281)
@@ -18,7 +20,8 @@ scale = Vector2(11.614271, -0.30441967)
 shape = SubResource("RectangleShape2D_53h3h")
 
 [node name="Player" parent="." instance=ExtResource("1_jlb33")]
-position = Vector2(-416, 280)
+position = Vector2(-398, 248)
+scale = Vector2(1.5468003, 1.7364738)
 
 [node name="Grinch" parent="." instance=ExtResource("2_qg6j6")]
 position = Vector2(-707.00006, 251)
@@ -31,3 +34,15 @@ scale = Vector2(0.478, 0.468)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(0, 1)
 texture = ExtResource("4_827iy")
+
+[node name="Hindring 1" parent="." instance=ExtResource("4_oji4g")]
+position = Vector2(-29, 280)
+
+[node name="Hindring 2" parent="." instance=ExtResource("5_oji4g")]
+position = Vector2(646, 305)
+
+[node name="Hindring 3" parent="." instance=ExtResource("4_oji4g")]
+position = Vector2(229, 276)
+
+[node name="Hindring 4" parent="." instance=ExtResource("4_oji4g")]
+position = Vector2(228, 128)
