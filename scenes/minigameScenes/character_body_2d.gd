@@ -5,19 +5,24 @@ extends CharacterBody2D
 @export var gravity: float = 800.0
 var held_gifts: int = 0
 var catch_area: Area2D
-@export var speedmulti: float = 1.12
+@export var speedmulti: float = 1.14
+var direction: float = 0
+@onready var animated_sprite = $Sprite
+
 
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "ui_up", "ui_down").x
-	velocity.x = input_direction * speed
+	direction = input_direction
+	velocity.x = direction * speed
+	
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_velocity
 		
 func _ready():
 
-	catch_area = get_node("Sprite/CatchArea")
+	catch_area = get_node("CatchArea")
 	#catch_areaCoal = get_node("Sprite/CatchArea")
 	catch_area.connect("area_entered", Callable(self, "_on_catch_area_entered"))
 	#catch_areaCoal.connect("area_entered", Callable(self, "_on_catch_area_entered"))
@@ -54,10 +59,18 @@ func _on_timer_timeout() -> void:
 	
 
 
-
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
-
+		
+	
+	update_animation()
 	get_input()
 	move_and_slide()
+	
+func update_animation():
+	if direction != 0:
+		animated_sprite.play("walk")
+		animated_sprite.flip_h = direction < 0
+	else:
+		animated_sprite.play("idle")
