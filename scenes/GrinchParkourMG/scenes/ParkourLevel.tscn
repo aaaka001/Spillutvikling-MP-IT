@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dr8rrklxw2nxl"]
+[gd_scene load_steps=7 format=3 uid="uid://dr8rrklxw2nxl"]
 
 [ext_resource type="PackedScene" uid="uid://d2aclot747p23" path="res://scenes/GrinchParkourMG/scenes/Player.tscn" id="1_jlb33"]
 [ext_resource type="Texture2D" uid="uid://djt4d8g136moi" path="res://assets/Blokk.png" id="1_qg6j6"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ur2sy"]
 size = Vector2(80, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oil0n"]
+size = Vector2(20, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53h3h"]
 size = Vector2(145.34077, 140.4281)
@@ -23,6 +26,13 @@ texture = ExtResource("1_qg6j6")
 position = Vector2(436, 275.5)
 shape = SubResource("RectangleShape2D_ur2sy")
 
+[node name="Trigger" type="Area2D" parent="Hindring1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hindring1/Trigger"]
+position = Vector2(386, 276)
+shape = SubResource("RectangleShape2D_oil0n")
+debug_color = Color(0.86341727, 0.25027257, 0.64923257, 0.41960785)
+
 [node name="Hindring2" type="StaticBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Hindring2"]
@@ -34,6 +44,13 @@ texture = ExtResource("1_qg6j6")
 position = Vector2(564, 256.61993)
 scale = Vector2(1, 2.3599975)
 shape = SubResource("RectangleShape2D_ur2sy")
+
+[node name="Trigger" type="Area2D" parent="Hindring2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hindring2/Trigger"]
+position = Vector2(495, 227)
+shape = SubResource("RectangleShape2D_oil0n")
+debug_color = Color(0.86341727, 0.25027257, 0.64923257, 0.41960785)
 
 [node name="Ground" type="StaticBody2D" parent="."]
 
@@ -51,5 +68,5 @@ shape = SubResource("RectangleShape2D_53h3h")
 position = Vector2(186, 232)
 
 [node name="Grinch" parent="." instance=ExtResource("2_qg6j6")]
-position = Vector2(51.000004, 253.99998)
-scale = Vector2(0.1658047, 0.20515881)
+position = Vector2(49, 248.00002)
+scale = Vector2(0.22748044, 0.22183578)
