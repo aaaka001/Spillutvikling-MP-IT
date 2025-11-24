@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=4 uid="uid://cenfpbm2ih4ls"]
+[gd_scene load_steps=6 format=4 uid="uid://cenfpbm2ih4ls"]
 
 [ext_resource type="Texture2D" uid="uid://cctoe1gyb0ha4" path="res://scenes/FourthMinigame/snow backgrund.png" id="1_huqs4"]
 [ext_resource type="PackedScene" uid="uid://cx8umn6mmqqsf" path="res://scenes/FourthMinigame/fourthMinigame.tscn" id="2_huqs4"]
+[ext_resource type="PackedScene" uid="uid://dsh6d4nmqru5y" path="res://scenes/FourthMinigame/Shoot-at.tscn" id="3_n0kml"]
+[ext_resource type="PackedScene" uid="uid://cigglxbemg27l" path="res://scenes/FourthMinigame/Grønn-Gave.tscn" id="4_s5dxh"]
 
 [sub_resource type="TileSet" id="TileSet_n0kml"]
 tile_size = Vector2i(128, 128)
@@ -18,4 +20,13 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAA
 tile_set = SubResource("TileSet_n0kml")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_huqs4")]
-position = Vector2(509, 104)
+position = Vector2(90, 387)
+
+[node name="rødGave1" parent="." instance=ExtResource("3_n0kml")]
+position = Vector2(866, 513)
+
+[node name="GrønnGave1" parent="." instance=ExtResource("4_s5dxh")]
+position = Vector2(826, 524)
+
+[node name="GrønnGave2" parent="." instance=ExtResource("4_s5dxh")]
+position = Vector2(917, 520)

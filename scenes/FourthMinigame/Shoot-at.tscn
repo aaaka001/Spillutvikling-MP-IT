@@ -3,15 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://bw4eroi3hiffw" path="res://scenes/FourthMinigame/sprite_juleting16.png" id="1_uxaee"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ufhs8"]
-size = Vector2(88, 108.5)
+size = Vector2(51, 53.5625)
 
 [node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-3, -0.9999924)
-scale = Vector2(0.42857143, 0.43973213)
+position = Vector2(4.7786407, 5.671653)
+scale = Vector2(0.23313107, 0.1978944)
 texture = ExtResource("1_uxaee")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-16, -21.75)
+position = Vector2(-1.5, -4.78125)
 shape = SubResource("RectangleShape2D_ufhs8")

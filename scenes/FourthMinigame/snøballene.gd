@@ -6,3 +6,7 @@ func _ready():
 
 func _physics_process(delta):
 	linear_velocity = Vector2.RIGHT.rotated(rotation) * speed
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	body.queue_free()
