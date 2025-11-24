@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://2nshxd83wqeb" path="res://scenes/GrinchParkourMG/assets/grinch-sprite-sheet.png" id="2_fh8e3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4tcex"]
-size = Vector2(341, 375)
+size = Vector2(341, 363)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pv5ln"]
 atlas = ExtResource("2_fh8e3")
@@ -49,7 +49,7 @@ size = Vector2(104, 326)
 script = ExtResource("1_fh8e3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(53.5, 20.5)
+position = Vector2(53.5, 14.5)
 shape = SubResource("RectangleShape2D_4tcex")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

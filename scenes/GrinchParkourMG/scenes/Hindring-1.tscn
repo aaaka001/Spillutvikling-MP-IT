@@ -9,6 +9,7 @@ size = Vector2(138.25, 139)
 size = Vector2(12.418652, 82.45072)
 
 [node name="Hindring 1" type="StaticBody2D"]
+scale = Vector2(0.8, 0.8)
 
 [node name="Texture" type="Sprite2D" parent="."]
 position = Vector2(55, -3.9999998)
