@@ -1,72 +1,33 @@
-[gd_scene load_steps=7 format=3 uid="uid://dr8rrklxw2nxl"]
+[gd_scene load_steps=5 format=3 uid="uid://dr8rrklxw2nxl"]
 
 [ext_resource type="PackedScene" uid="uid://d2aclot747p23" path="res://scenes/GrinchParkourMG/scenes/Player.tscn" id="1_jlb33"]
-[ext_resource type="Texture2D" uid="uid://djt4d8g136moi" path="res://assets/Blokk.png" id="1_qg6j6"]
 [ext_resource type="PackedScene" uid="uid://fks2eswgtf25" path="res://scenes/GrinchParkourMG/scenes/Grinch.tscn" id="2_qg6j6"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ur2sy"]
-size = Vector2(80, 55)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oil0n"]
-size = Vector2(20, 50)
+[ext_resource type="Texture2D" uid="uid://i1wmoj34nr0k" path="res://scenes/GrinchParkourMG/assets/bakgrunn.png" id="4_827iy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53h3h"]
-size = Vector2(145.34077, 140.4281)
+size = Vector2(132.68275, 140.4281)
 
 [node name="ParkourLevel" type="Node2D"]
 
-[node name="Hindring1" type="StaticBody2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="Hindring1"]
-position = Vector2(435, 275.5)
-scale = Vector2(0.26708075, 0.40972224)
-texture = ExtResource("1_qg6j6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hindring1"]
-position = Vector2(436, 275.5)
-shape = SubResource("RectangleShape2D_ur2sy")
-
-[node name="Trigger" type="Area2D" parent="Hindring1"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hindring1/Trigger"]
-position = Vector2(386, 276)
-shape = SubResource("RectangleShape2D_oil0n")
-debug_color = Color(0.86341727, 0.25027257, 0.64923257, 0.41960785)
-
-[node name="Hindring2" type="StaticBody2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="Hindring2"]
-position = Vector2(563, 256.61993)
-scale = Vector2(0.26708075, 0.9669435)
-texture = ExtResource("1_qg6j6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hindring2"]
-position = Vector2(564, 256.61993)
-scale = Vector2(1, 2.3599975)
-shape = SubResource("RectangleShape2D_ur2sy")
-
-[node name="Trigger" type="Area2D" parent="Hindring2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hindring2/Trigger"]
-position = Vector2(495, 227)
-shape = SubResource("RectangleShape2D_oil0n")
-debug_color = Color(0.86341727, 0.25027257, 0.64923257, 0.41960785)
-
 [node name="Ground" type="StaticBody2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="Ground"]
-position = Vector2(537, 329)
-scale = Vector2(3.3049798, -0.33744448)
-texture = ExtResource("1_qg6j6")
+position = Vector2(-770, 48)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2(534.8294, 326.3745)
-scale = Vector2(7.2542706, -0.30441967)
+position = Vector2(777.49316, 326)
+scale = Vector2(11.614271, -0.30441967)
 shape = SubResource("RectangleShape2D_53h3h")
 
 [node name="Player" parent="." instance=ExtResource("1_jlb33")]
-position = Vector2(186, 232)
+position = Vector2(-416, 280)
 
 [node name="Grinch" parent="." instance=ExtResource("2_qg6j6")]
-position = Vector2(49, 248.00002)
-scale = Vector2(0.22748044, 0.22183578)
+position = Vector2(-707.00006, 251)
+scale = Vector2(0.478, 0.468)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(0, 1)
+texture = ExtResource("4_827iy")

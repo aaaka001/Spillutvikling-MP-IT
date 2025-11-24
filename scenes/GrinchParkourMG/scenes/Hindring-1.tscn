@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu8mxo6vfblc4"]
+
+[ext_resource type="Texture2D" uid="uid://diu70k4txtn30" path="res://scenes/GrinchParkourMG/assets/Hindringer.png" id="1_e4doc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nifna"]
+size = Vector2(168, 167)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvvga"]
+size = Vector2(13.553869, 82.45072)
+
+[node name="Hindring 1" type="StaticBody2D"]
+
+[node name="Texture" type="Sprite2D" parent="."]
+position = Vector2(55, -3.9999998)
+scale = Vector2(0.65, 0.676)
+texture = ExtResource("1_e4doc")
+region_enabled = true
+region_rect = Rect2(148.86314, 214.07483, 289.02155, 287.6518)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(58, -0.5)
+shape = SubResource("RectangleShape2D_nifna")
+
+[node name="Trigger" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger"]
+position = Vector2(-61, 19)
+scale = Vector2(4.2207513, 1.5039287)
+shape = SubResource("RectangleShape2D_uvvga")
+debug_color = Color(0.5606997, 0.43625003, 0.90377754, 0.41960785)
