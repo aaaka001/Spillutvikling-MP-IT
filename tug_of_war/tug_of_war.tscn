@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://dhd7wmmrvgovy"]
+[gd_scene load_steps=10 format=3 uid="uid://dhd7wmmrvgovy"]
 
 [ext_resource type="Texture2D" uid="uid://c4cxvi3axhyf8" path="res://tug_of_war/output.jpg" id="1_ip278"]
 [ext_resource type="Script" uid="uid://cm4ug8st345he" path="res://tug_of_war/tug.gd" id="2_n55o8"]
 [ext_resource type="Texture2D" uid="uid://0my2gns1wnk" path="res://tug_of_war/santa_pulling_png.png" id="2_pfdao"]
-[ext_resource type="Script" uid="uid://dfqox4gcmgokc" path="res://scenes/label.gd" id="3_kxty2"]
+[ext_resource type="Script" path="res://scenes/label.gd" id="3_kxty2"]
 [ext_resource type="FontFile" uid="uid://c7ltpxfxcqx6d" path="res://tug_of_war/Minecraft.ttf" id="4_8ebo7"]
 [ext_resource type="Script" uid="uid://f8qfw6cmahhh" path="res://tug_of_war/p2count.gd" id="6_emqf6"]
+[ext_resource type="AudioStream" uid="uid://cfmoxw47sbe6s" path="res://tug_of_war/tug_music.mp3" id="7_vvwoo"]
+[ext_resource type="Script" uid="uid://dk86gec13sn8h" path="res://tug_of_war/audio_stream_player_2d.gd" id="8_0m4kt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hspvn"]
 size = Vector2(214, 126)
@@ -16,6 +18,10 @@ size = Vector2(214, 126)
 offset_right = 1147.0
 offset_bottom = 650.0
 texture = ExtResource("1_ip278")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="TextureRect"]
+stream = ExtResource("7_vvwoo")
+script = ExtResource("8_0m4kt")
 
 [node name="Sprite2D" type="Sprite2D" parent="TextureRect"]
 position = Vector2(614.00006, 367.00003)

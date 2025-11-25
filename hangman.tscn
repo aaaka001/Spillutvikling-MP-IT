@@ -1,10 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2d4ljsgrx5da"]
+[gd_scene load_steps=9 format=3 uid="uid://dmidxwgo6uehb"]
 
-[ext_resource type="Texture2D" path="res://hangman/julenisse_init.png" id="1_j8mr7"]
 [ext_resource type="Script" path="res://hangman/rich_text_label.gd" id="1_w3s1m"]
 [ext_resource type="Script" path="res://hangman/line_edit.gd" id="2_ilscd"]
 [ext_resource type="Script" path="res://hangman/healthbar.gd" id="2_od0u0"]
-[ext_resource type="Texture2D" path="res://hangman/Skjermbilde_2025-11-18_kl._10.36.06-removebg-preview.png" id="5_j8mr7"]
 
 [sub_resource type="FontVariation" id="FontVariation_dkgme"]
 
@@ -60,7 +58,6 @@ offset_left = -132.0
 offset_top = 1.0
 offset_right = 1154.0
 offset_bottom = 647.0
-texture = ExtResource("1_j8mr7")
 
 [node name="generatedWord" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -115,7 +112,6 @@ script = ExtResource("2_od0u0")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(39, 41.999996)
 scale = Vector2(0.14941405, 0.21721311)
-texture = ExtResource("5_j8mr7")
 script = SubResource("GDScript_j8mr7")
 
 [connection signal="text_submitted" from="userInput" to="generatedWord" method="_on_line_edit_text_submitted"]
