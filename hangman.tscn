@@ -1,8 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmidxwgo6uehb"]
-
-[ext_resource type="Script" path="res://hangman/rich_text_label.gd" id="1_w3s1m"]
-[ext_resource type="Script" path="res://hangman/line_edit.gd" id="2_ilscd"]
-[ext_resource type="Script" path="res://hangman/healthbar.gd" id="2_od0u0"]
+[gd_scene load_steps=6 format=3 uid="uid://dmidxwgo6uehb"]
 
 [sub_resource type="FontVariation" id="FontVariation_dkgme"]
 
@@ -72,7 +68,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_kgr6n")
 bbcode_enabled = true
 text = "[center] hello"
 fit_content = true
-script = ExtResource("1_w3s1m")
 
 [node name="Label" type="Label" parent="generatedWord"]
 layout_mode = 0
@@ -96,7 +91,6 @@ text = "Type here"
 placeholder_text = "Type here"
 alignment = 1
 max_length = 100
-script = ExtResource("2_ilscd")
 
 [node name="healthbar" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -107,7 +101,6 @@ offset_bottom = 92.0
 theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
 text = "Liv"
-script = ExtResource("2_od0u0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(39, 41.999996)
