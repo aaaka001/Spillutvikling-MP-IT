@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://5j3gevo2ua35"]
+[gd_scene load_steps=8 format=4 uid="uid://cqiknsflxiau5"]
 
 [ext_resource type="Texture2D" uid="uid://cwcxtx4j5u41u" path="res://assets/bakgr.png" id="1_utxpp"]
 [ext_resource type="PackedScene" uid="uid://couflduugxhfk" path="res://scenes/minigameScenes/first_mg.tscn" id="2_done4"]
