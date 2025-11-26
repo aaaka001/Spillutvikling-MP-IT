@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c7yqr56fiexmb"]
+[gd_scene load_steps=6 format=3 uid="uid://c8sjsqun751rl"]
 
-[ext_resource type="Script" uid="uid://do50v37mipttn" path="res://ResultScreens/scripts/result-function.gd" id="1_up55u"]
-[ext_resource type="Texture2D" uid="uid://bdddhupdym0au" path="res://ResultScreens/assets/snowy-background.png" id="2_ki3d3"]
-[ext_resource type="Texture2D" uid="uid://cw4cwwnd7t8f8" path="res://ResultScreens/assets/defeat-title.png" id="2_vvhl6"]
-[ext_resource type="Texture2D" uid="uid://bel0470x0e6jx" path="res://ResultScreens/assets/wooden-button.png" id="3_vvhl6"]
-[ext_resource type="FontFile" uid="uid://dyqpd38bqexlf" path="res://ResultScreens/assets/Pixellari.ttf" id="5_eiyir"]
+[ext_resource type="Script" uid="uid://do50v37mipttn" path="res://ResultScreens/scripts/result-function.gd" id="1_x5oxn"]
+[ext_resource type="Texture2D" uid="uid://bdddhupdym0au" path="res://ResultScreens/assets/snowy-background.png" id="2_jinro"]
+[ext_resource type="Texture2D" uid="uid://dd5b20x6tbeof" path="res://ResultScreens/assets/victory-title.png" id="3_x5oxn"]
+[ext_resource type="Texture2D" uid="uid://bel0470x0e6jx" path="res://ResultScreens/assets/wooden-button.png" id="4_yyq4x"]
+[ext_resource type="FontFile" uid="uid://dyqpd38bqexlf" path="res://ResultScreens/assets/Pixellari.ttf" id="5_rka1e"]
 
 [node name="defeat-screen" type="Control"]
 layout_mode = 3
@@ -13,18 +13,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_up55u")
+script = ExtResource("1_x5oxn")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture_filter = 2
-position = Vector2(961.50006, 356.75003)
-scale = Vector2(2.05, 1.453)
-texture = ExtResource("2_ki3d3")
+position = Vector2(961.50006, 260.25012)
+scale = Vector2(1.8740233, 1.4534507)
+texture = ExtResource("2_jinro")
 
 [node name="Title" type="Sprite2D" parent="."]
-position = Vector2(950.00006, 285.92)
-scale = Vector2(1.48, 1.48)
-texture = ExtResource("2_vvhl6")
+position = Vector2(968.00006, 284)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("3_x5oxn")
 
 [node name="Menu" type="TextureButton" parent="."]
 self_modulate = Color(0.97669727, 0.9190266, 0.94189054, 1)
@@ -34,7 +34,7 @@ offset_top = 487.00003
 offset_right = 3005.0
 offset_bottom = 1511.0
 scale = Vector2(0.21, 0.21)
-texture_normal = ExtResource("3_vvhl6")
+texture_normal = ExtResource("4_yyq4x")
 
 [node name="Label" type="Label" parent="Menu"]
 z_index = 2
@@ -44,7 +44,7 @@ offset_top = 452.3808
 offset_right = 463.8101
 offset_bottom = 487.3808
 scale = Vector2(17.63, 17.63)
-theme_override_fonts/font = ExtResource("5_eiyir")
+theme_override_fonts/font = ExtResource("5_rka1e")
 text = "Menu
 "
 
@@ -56,7 +56,7 @@ offset_top = 484.00003
 offset_right = 2449.0
 offset_bottom = 1508.0
 scale = Vector2(0.21, 0.21)
-texture_normal = ExtResource("3_vvhl6")
+texture_normal = ExtResource("4_yyq4x")
 
 [node name="Label2" type="Label" parent="Exit"]
 z_index = 2
@@ -66,7 +66,7 @@ offset_top = 466.6665
 offset_right = 535.23816
 offset_bottom = 501.6665
 scale = Vector2(17.63, 17.63)
-theme_override_fonts/font = ExtResource("5_eiyir")
+theme_override_fonts/font = ExtResource("5_rka1e")
 text = "Exit
 "
 
@@ -78,7 +78,7 @@ offset_top = 486.00003
 offset_right = 2342.0
 offset_bottom = 1510.0
 scale = Vector2(0.21, 0.21)
-texture_normal = ExtResource("3_vvhl6")
+texture_normal = ExtResource("4_yyq4x")
 
 [node name="Label2" type="Label" parent="."]
 z_index = 2
@@ -88,7 +88,7 @@ offset_top = 574.0
 offset_right = 937.99994
 offset_bottom = 628.0
 scale = Vector2(3.239, 2.082)
-theme_override_fonts/font = ExtResource("5_eiyir")
+theme_override_fonts/font = ExtResource("5_rka1e")
 text = "Try
 Again
 "
