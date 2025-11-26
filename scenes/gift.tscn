@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://cj6g63gasdsvm" path="res://assets/godot-placeholder.png" id="2_olhi4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2knn2"]
-size = Vector2(92, 91)
+size = Vector2(101, 93.5)
 
-[node name="gift" type="Node2D"]
+[node name="gift" type="Node2D" groups=["gift"]]
+position = Vector2(224, 4)
 script = ExtResource("1_ioja6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -15,7 +16,10 @@ scale = Vector2(0.50549453, 0.5810811)
 texture = ExtResource("2_olhi4")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-43, -28.5)
+position = Vector2(-44.5, -31.75)
 shape = SubResource("RectangleShape2D_2knn2")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

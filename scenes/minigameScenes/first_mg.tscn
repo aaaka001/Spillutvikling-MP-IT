@@ -11,7 +11,7 @@ size = Vector2(217.24773, 200.52295)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kg7cr"]
 size = Vector2(149, 121)
 
-[node name="Root" type="Node2D"]
+[node name="PLayer" type="Node2D"]
 script = SubResource("GDScript_kg7cr")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
@@ -23,6 +23,8 @@ scale = Vector2(0.7364865, 0.7364865)
 texture = ExtResource("1_n4hnk")
 
 [node name="CatchArea" type="Area2D" parent="CharacterBody2D/Sprite"]
+collision_layer = 4
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Sprite/CatchArea"]
 position = Vector2(4.0734253, -17.43573)
