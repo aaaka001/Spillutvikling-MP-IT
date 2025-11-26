@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmidxwgo6uehb"]
+[gd_scene load_steps=8 format=3 uid="uid://oypspjxc60ww"]
 
-[ext_resource type="Script" path="res://hangman/rich_text_label.gd" id="1_w3s1m"]
-[ext_resource type="Script" path="res://hangman/line_edit.gd" id="2_ilscd"]
-[ext_resource type="Script" path="res://hangman/healthbar.gd" id="2_od0u0"]
+[ext_resource type="Script" uid="uid://desjt2tp0ruxa" path="res://rich_text_label.gd" id="1_w3s1m"]
+[ext_resource type="Script" uid="uid://kil6hqg5rc8" path="res://line_edit.gd" id="2_ilscd"]
+[ext_resource type="Script" uid="uid://7jify8j4wcff" path="res://healthbar.gd" id="2_od0u0"]
 
 [sub_resource type="FontVariation" id="FontVariation_dkgme"]
 
@@ -26,20 +26,6 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="GDScript" id="GDScript_j8mr7"]
-script/source = "extends Sprite2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
-
 [node name="Hangman" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -51,13 +37,6 @@ offset_right = -1154.0
 offset_bottom = -646.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = -132.0
-offset_top = 1.0
-offset_right = 1154.0
-offset_bottom = 647.0
 
 [node name="generatedWord" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -74,14 +53,11 @@ text = "[center] hello"
 fit_content = true
 script = ExtResource("1_w3s1m")
 
-[node name="Label" type="Label" parent="generatedWord"]
+[node name="healthbar" type="RichTextLabel" parent="generatedWord"]
 layout_mode = 0
-offset_left = -8.0
-offset_top = -42.0
-offset_right = 32.0
-offset_bottom = -19.0
-text = "asd
-"
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_od0u0")
 
 [node name="userInput" type="LineEdit" parent="."]
 layout_mode = 1
@@ -90,7 +66,7 @@ anchor_right = 1.07
 anchor_bottom = 3.279
 offset_left = 402.0
 offset_top = 368.0
-offset_right = 470.5625
+offset_right = 469.063
 offset_bottom = 399.0
 text = "Type here"
 placeholder_text = "Type here"
@@ -98,21 +74,5 @@ alignment = 1
 max_length = 100
 script = ExtResource("2_ilscd")
 
-[node name="healthbar" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 72.0
-offset_top = 2.0
-offset_right = 452.0
-offset_bottom = 92.0
-theme_override_font_sizes/normal_font_size = 50
-bbcode_enabled = true
-text = "Liv"
-script = ExtResource("2_od0u0")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(39, 41.999996)
-scale = Vector2(0.14941405, 0.21721311)
-script = SubResource("GDScript_j8mr7")
-
 [connection signal="text_submitted" from="userInput" to="generatedWord" method="_on_line_edit_text_submitted"]
-[connection signal="text_submitted" from="userInput" to="healthbar" method="_on_user_input_text_submitted"]
+[connection signal="text_submitted" from="userInput" to="generatedWord/healthbar" method="_on_user_input_text_submitted"]
