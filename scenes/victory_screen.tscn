@@ -1,0 +1,3 @@
+[gd_scene load_steps=0 format=3 uid="uid://4a4vtbppvv14"]
+
+[node name="VictoryScreen" type="Node2D"]
