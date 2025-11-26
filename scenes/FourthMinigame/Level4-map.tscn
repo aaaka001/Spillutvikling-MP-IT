@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=4 uid="uid://cenfpbm2ih4ls"]
+[gd_scene load_steps=8 format=4 uid="uid://cenfpbm2ih4ls"]
 
 [ext_resource type="Texture2D" uid="uid://cctoe1gyb0ha4" path="res://scenes/FourthMinigame/snow backgrund.png" id="1_huqs4"]
+[ext_resource type="Script" path="res://scenes/FourthMinigame/level_4_map.gd" id="1_pqe8k"]
 [ext_resource type="PackedScene" uid="uid://cx8umn6mmqqsf" path="res://scenes/FourthMinigame/fourthMinigame.tscn" id="2_huqs4"]
 [ext_resource type="PackedScene" uid="uid://dsh6d4nmqru5y" path="res://scenes/FourthMinigame/Shoot-at.tscn" id="3_n0kml"]
 [ext_resource type="PackedScene" uid="uid://cigglxbemg27l" path="res://scenes/FourthMinigame/Grønn-Gave.tscn" id="4_s5dxh"]
+[ext_resource type="PackedScene" uid="uid://7eopjsrkqod" path="res://scenes/FourthMinigame/kull.tscn" id="6_qnh54"]
 
 [sub_resource type="TileSet" id="TileSet_n0kml"]
 tile_size = Vector2i(128, 128)
 
 [node name="Level4Map" type="Node2D"]
+script = ExtResource("1_pqe8k")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1149.0
@@ -30,3 +33,65 @@ position = Vector2(826, 524)
 
 [node name="GrønnGave2" parent="." instance=ExtResource("4_s5dxh")]
 position = Vector2(917, 520)
+
+[node name="rødGave2" parent="." instance=ExtResource("3_n0kml")]
+position = Vector2(960, 508)
+
+[node name="rødGave3" parent="." instance=ExtResource("3_n0kml")]
+position = Vector2(771, 515)
+
+[node name="GrønnGave3" parent="." instance=ExtResource("4_s5dxh")]
+position = Vector2(1011, 512)
+
+[node name="GrønnGave4" parent="." instance=ExtResource("4_s5dxh")]
+position = Vector2(807, 485)
+
+[node name="rødGave4" parent="." instance=ExtResource("3_n0kml")]
+position = Vector2(847, 479)
+
+[node name="GrønnGave5" parent="." instance=ExtResource("4_s5dxh")]
+position = Vector2(896, 482)
+
+[node name="rødGave5" parent="." instance=ExtResource("3_n0kml")]
+position = Vector2(937, 476)
+
+[node name="GrønnGave6" parent="." instance=ExtResource("4_s5dxh")]
+position = Vector2(984, 483)
+
+[node name="rødGave6" parent="." instance=ExtResource("3_n0kml")]
+position = Vector2(826, 442)
+
+[node name="GrønnGave7" parent="." instance=ExtResource("4_s5dxh")]
+position = Vector2(874, 450)
+
+[node name="rødGave7" parent="." instance=ExtResource("3_n0kml")]
+position = Vector2(911, 440)
+
+[node name="GrønnGave8" parent="." instance=ExtResource("4_s5dxh")]
+position = Vector2(961, 447)
+
+[node name="GrønnGave9" parent="." instance=ExtResource("4_s5dxh")]
+position = Vector2(852, 415)
+
+[node name="rødGave8" parent="." instance=ExtResource("3_n0kml")]
+position = Vector2(886, 407)
+
+[node name="GrønnGave10" parent="." instance=ExtResource("4_s5dxh")]
+position = Vector2(935, 413)
+
+[node name="rødGave9" parent="." instance=ExtResource("3_n0kml")]
+position = Vector2(862, 372)
+
+[node name="GrønnGave11" parent="." instance=ExtResource("4_s5dxh")]
+position = Vector2(912, 380)
+
+[node name="rødGave10" parent="." instance=ExtResource("3_n0kml")]
+position = Vector2(882, 336)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+autostart = true
+
+[node name="Area2D" parent="." instance=ExtResource("6_qnh54")]
+position = Vector2(464, -28)

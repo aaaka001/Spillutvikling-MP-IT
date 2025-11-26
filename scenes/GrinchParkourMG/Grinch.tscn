@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://fks2eswgtf25"]
 
-[ext_resource type="Script" uid="uid://mi08ew36axyr" path="res://scripts/grinch.gd" id="1_7jyay"]
+[ext_resource type="Script" path="res://scripts/grinch.gd" id="1_7jyay"]
 [ext_resource type="Texture2D" uid="uid://bg4cy8urwu08" path="res://assets/Placeholder.png" id="1_ufhuc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7jyay"]
@@ -15,5 +15,5 @@ shape = SubResource("RectangleShape2D_7jyay")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(59, 38)
-scale = Vector2(0.3776596, 0.38636363)
+scale = Vector2(0.37766, 0.386364)
 texture = ExtResource("1_ufhuc")

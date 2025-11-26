@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cctoe1gyb0ha4"
-path="res://.godot/imported/snow backgrund.png-be39114ace7e425adaf279ba38903c47.ctex"
+uid="uid://26anwblu6xa1"
+path="res://.godot/imported/kull.png-fa3994a6faf89e20202bc5b58b3fc5ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/FourthMinigame/snow backgrund.png"
-dest_files=["res://.godot/imported/snow backgrund.png-be39114ace7e425adaf279ba38903c47.ctex"]
+source_file="res://scenes/FourthMinigame/kull.png"
+dest_files=["res://.godot/imported/kull.png-fa3994a6faf89e20202bc5b58b3fc5ec.ctex"]
 
 [params]
 
