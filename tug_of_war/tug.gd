@@ -3,7 +3,7 @@ extends Sprite2D
 var win_detected = preload("res://scenes/screens/PlayerWin/p1win.tscn")
 var clicksp1 = 0
 var clicksp2 = 0
-var winner_name = "none"
+var winner_name = "" 
 
 
 func _ready() -> void:

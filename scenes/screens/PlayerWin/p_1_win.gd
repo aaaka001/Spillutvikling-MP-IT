@@ -7,8 +7,8 @@ func _ready() -> void:
 	audio.stream = load("res://scenes/screens/PlayerWin/victory-chime-366449.mp3")
 	audio.play()
 	
-	winner = tug.winner_name
-	$"TextureButton/Label".text =  winner + "wins!"
+
+	$"TextureButton/Label".text =  str(tug.winner_name) + "wins!"
 
 
 func _process(delta: float) -> void:
