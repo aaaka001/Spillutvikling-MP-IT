@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://crntoxeoqx75m"]
+
+[ext_resource type="Texture2D" path="res://scenes/pong/bg.webp" id="1_4opyw"]
+[ext_resource type="Texture2D" path="res://scenes/pong/paddle.png" id="2_pkvn5"]
+
+[node name="Node2D" type="TextureRect"]
+offset_left = 4.0
+offset_right = 1922.0
+offset_bottom = 1090.0
+texture = ExtResource("1_4opyw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(972, 1010)
+scale = Vector2(1.94, 1)
+texture = ExtResource("2_pkvn5")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(972, 64)
+scale = Vector2(1.94, 1)
+texture = ExtResource("2_pkvn5")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]

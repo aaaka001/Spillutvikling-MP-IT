@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://fks2eswgtf25"]
+
+[ext_resource type="Script" uid="uid://mi08ew36axyr" path="res://scenes/GrinchParkourMG/scripts/grinch.gd" id="1_fh8e3"]
+[ext_resource type="Texture2D" uid="uid://2nshxd83wqeb" path="res://scenes/GrinchParkourMG/assets/grinch-sprite-sheet.png" id="2_fh8e3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4tcex"]
+size = Vector2(341, 363)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pv5ln"]
+atlas = ExtResource("2_fh8e3")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0w1ue"]
+atlas = ExtResource("2_fh8e3")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7asvh"]
+atlas = ExtResource("2_fh8e3")
+region = Rect2(0, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7xum"]
+atlas = ExtResource("2_fh8e3")
+region = Rect2(512, 512, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fcrui"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pv5ln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0w1ue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7asvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7xum")
+}],
+"loop": true,
+"name": &"run",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fh8e3"]
+size = Vector2(104, 326)
+
+[node name="Grinch2" type="CharacterBody2D"]
+script = ExtResource("1_fh8e3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(53.5, 14.5)
+shape = SubResource("RectangleShape2D_4tcex")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(84, -16)
+sprite_frames = SubResource("SpriteFrames_fcrui")
+animation = &"run"
+autoplay = "run"
+frame = 3
+frame_progress = 1.0
+
+[node name="Detecter" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detecter"]
+position = Vector2(268, 20)
+shape = SubResource("RectangleShape2D_fh8e3")
+debug_color = Color(0.73891205, 0.3790838, 0.71015763, 0.41960785)
+
+[connection signal="area_entered" from="Detecter" to="." method="_on_detecter_area_entered"]
