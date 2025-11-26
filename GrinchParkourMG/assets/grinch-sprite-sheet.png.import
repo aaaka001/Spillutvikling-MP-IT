@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diu70k4txtn30"
-path="res://.godot/imported/Hindringer.png-61200ef7ac6580b5b43fde0ebfbb9724.ctex"
+uid="uid://2nshxd83wqeb"
+path="res://.godot/imported/grinch-sprite-sheet.png-03646689cb003027712dd68b82bc54b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/GrinchParkourMG/assets/Hindringer.png"
-dest_files=["res://.godot/imported/Hindringer.png-61200ef7ac6580b5b43fde0ebfbb9724.ctex"]
+source_file="res://GrinchParkourMG/assets/grinch-sprite-sheet.png"
+dest_files=["res://.godot/imported/grinch-sprite-sheet.png-03646689cb003027712dd68b82bc54b3.ctex"]
 
 [params]
 
