@@ -1,10 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://5j3gevo2ua35"]
+[gd_scene load_steps=12 format=3 uid="uid://5g1ygo7xq5b6"]
 
 [ext_resource type="Texture2D" uid="uid://btmmjn113kqlc" path="res://snow backgrund.png" id="1_11cdo"]
-[ext_resource type="Script" uid="uid://cb0yytd5i5bd4" path="res://scenes/minigameScenes/mg_1_map.gd" id="1_gsf6n"]
+[ext_resource type="Script" path="res://scenes/minigameScenes/mg_1_map.gd" id="1_gsf6n"]
 [ext_resource type="PackedScene" uid="uid://couflduugxhfk" path="res://scenes/minigameScenes/first_mg.tscn" id="2_gsf6n"]
 [ext_resource type="Texture2D" uid="uid://di2377sl5ljvw" path="res://snow-backgrund_0003_CLOUDS.png" id="2_oeudc"]
-[ext_resource type="Script" uid="uid://bainn123pqfck" path="res://scenes/minigameScenes/spawner.gd" id="3_oeudc"]
+[ext_resource type="Script" uid="uid://bainn123pqfck" path="res://scripts/spawner.gd" id="3_oeudc"]
 [ext_resource type="PackedScene" uid="uid://3w2e6dx201hl" path="res://scenes/coal.tscn" id="4_q25p4"]
 [ext_resource type="PackedScene" uid="uid://dcehpx38hidjl" path="res://scenes/gift.tscn" id="5_iux6t"]
 [ext_resource type="Script" path="res://scenes/label.gd" id="6_xjeuy"]
