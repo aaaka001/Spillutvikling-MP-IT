@@ -4,16 +4,10 @@ var win_detected = preload("res://scenes/screens/PlayerWin/p1win.tscn")
 var clicksp1 = 0
 var clicksp2 = 0
 var winner_name = "none"
-@onready var juke_box: AudioStreamPlayer
 
 
 func _ready() -> void:
-	juke_box = AudioStreamPlayer.new()
-	add_child(juke_box)
-	juke_box.stream = preload("res://tug_of_war/tug_music.mp3")
-	juke_box.bus = "Master"
-	juke_box.autoplay = true
-	juke_box.play()
+	pass
 	
 
 
