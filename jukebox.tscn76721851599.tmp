@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://jln3n2anj7hx"]
+
+[ext_resource type="Script" uid="uid://b4nxbngpabxdv" path="res://juke_box.gd" id="1_wkbq2"]
+
+[node name="JukeBoxUi" type="TextureButton"]
+offset_left = 1429.0
+offset_top = 228.0
+offset_right = 1473.0
+offset_bottom = 252.0
+script = ExtResource("1_wkbq2")
+metadata/_edit_use_anchors_ = true

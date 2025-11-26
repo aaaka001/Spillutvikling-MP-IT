@@ -1,0 +1,84 @@
+[gd_scene load_steps=10 format=3 uid="uid://jln3n2anj7hx"]
+
+[ext_resource type="Script" uid="uid://b4nxbngpabxdv" path="res://juke_box.gd" id="1_wkbq2"]
+[ext_resource type="Texture2D" uid="uid://c4cxvi3axhyf8" path="res://tug_of_war/output.jpg" id="2_3qndx"]
+[ext_resource type="Script" uid="uid://c8fqrvbsixnt" path="res://tug_of_war/texture_rect.gd" id="3_xfhbl"]
+[ext_resource type="Texture2D" uid="uid://0my2gns1wnk" path="res://tug_of_war/santa_pulling_png.png" id="4_ft11j"]
+[ext_resource type="Script" uid="uid://cm4ug8st345he" path="res://tug_of_war/tug.gd" id="5_km0ip"]
+[ext_resource type="FontFile" uid="uid://c7ltpxfxcqx6d" path="res://tug_of_war/Minecraft.ttf" id="6_jhwru"]
+[ext_resource type="Script" path="res://scenes/label.gd" id="7_mrf30"]
+[ext_resource type="Script" uid="uid://f8qfw6cmahhh" path="res://tug_of_war/p2count.gd" id="8_tdvxn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fci3a"]
+size = Vector2(214, 126)
+
+[node name="JukeBoxUi" type="TextureButton"]
+offset_left = 1429.0
+offset_top = 228.0
+offset_right = 1473.0
+offset_bottom = 252.0
+script = ExtResource("1_wkbq2")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1147.0
+offset_bottom = 650.0
+texture = ExtResource("2_3qndx")
+script = ExtResource("3_xfhbl")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect"]
+position = Vector2(614.00006, 367.00003)
+rotation = 1.5737253
+scale = Vector2(1.0855409, 2.0309877)
+texture = ExtResource("4_ft11j")
+script = ExtResource("5_km0ip")
+
+[node name="p2" type="Area2D" parent="TextureRect/Sprite2D"]
+position = Vector2(-331.87024, 285.58932)
+rotation = -1.5762763
+scale = Vector2(0.4923766, 0.9211971)
+skew = 0.003914356
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Sprite2D/p2"]
+position = Vector2(911, 326)
+shape = SubResource("RectangleShape2D_fci3a")
+
+[node name="p1" type="Area2D" parent="TextureRect/Sprite2D"]
+position = Vector2(-11.891968, 7.882141)
+rotation = -1.5762763
+scale = Vector2(0.4923766, 0.9211971)
+skew = 0.003914356
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Sprite2D/p1"]
+position = Vector2(-363.02942, -15.043972)
+shape = SubResource("RectangleShape2D_fci3a")
+
+[node name="p1_count" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 130.0
+offset_right = 141.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(1, 0.00999999, 0.00999999, 1)
+theme_override_fonts/font = ExtResource("6_jhwru")
+theme_override_font_sizes/font_size = 60
+text = "Hei"
+script = ExtResource("7_mrf30")
+metadata/_edit_use_anchors_ = true
+
+[node name="p2_count" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1019.0
+offset_top = 137.0
+offset_right = 1128.0
+offset_bottom = 197.0
+theme_override_colors/font_color = Color(0, 0.04959052, 0.99999994, 1)
+theme_override_fonts/font = ExtResource("6_jhwru")
+theme_override_font_sizes/font_size = 60
+text = "test"
+script = ExtResource("8_tdvxn")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

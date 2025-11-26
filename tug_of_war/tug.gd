@@ -7,7 +7,8 @@ var winner_name = "none"
 
 
 func _ready() -> void:
-	jukebox.playing_music()
+	pass
+#	jukebox.playing_music()
 		
 
 	
@@ -25,8 +26,8 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_2_area_entered(area: Area2D) -> void:
-	jukebox.juke_box.stop()
-	jukebox.juke_box.queue_free()  
+	#jukebox.juke_box.stop()
+#	jukebox.juke_box.queue_free()  
 	
 	if area.name == "p2":
 		winner_name = "Player 1"
