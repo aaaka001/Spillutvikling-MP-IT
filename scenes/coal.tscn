@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://3w2e6dx201hl"]
 
-[ext_resource type="Script" path="res://scripts/coal.gd" id="1_q86jm"]
-[ext_resource type="Texture2D" uid="uid://c5lkso8hqu1o" path="res://redgodot.webp" id="2_1uv77"]
+[ext_resource type="Script" uid="uid://g3j3dvb0d0dp" path="res://scripts/coal.gd" id="1_q86jm"]
+[ext_resource type="Texture2D" uid="uid://0l3ko2wpbm17" path="res://Sprit/New Piskel-2.png" id="2_q86jm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0sb7u"]
 size = Vector2(180, 171)
@@ -11,9 +11,9 @@ scale = Vector2(0.39780006, 0.39780006)
 script = ExtResource("1_q86jm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(88.999985, -5.000001)
-scale = Vector2(0.18207768, 0.18207766)
-texture = ExtResource("2_1uv77")
+position = Vector2(93.01156, 5.027649)
+scale = Vector2(6.196371, 6.1963706)
+texture = ExtResource("2_q86jm")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_mask = 4
