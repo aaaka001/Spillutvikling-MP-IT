@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jgxuq8nsr1ov"
-path="res://.godot/imported/sprite_06.png-1267edf6a67432412fe66760c9e55d94.ctex"
+uid="uid://dmu1txiqjt2j0"
+path="res://.godot/imported/victory-background.png-9c23460ef715b4ca364479ae59bb5c4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/FourthMinigame/sprite_06.png"
-dest_files=["res://.godot/imported/sprite_06.png-1267edf6a67432412fe66760c9e55d94.ctex"]
+source_file="res://ResultScreens/assets/victory-background.png"
+dest_files=["res://.godot/imported/victory-background.png-9c23460ef715b4ca364479ae59bb5c4a.ctex"]
 
 [params]
 

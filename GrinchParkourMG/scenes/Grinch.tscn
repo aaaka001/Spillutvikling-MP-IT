@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://fks2eswgtf25"]
 
-[ext_resource type="Script" uid="uid://mi08ew36axyr" path="res://scenes/GrinchParkourMG/scripts/grinch.gd" id="1_fh8e3"]
-[ext_resource type="Texture2D" uid="uid://2nshxd83wqeb" path="res://scenes/GrinchParkourMG/assets/grinch-sprite-sheet.png" id="2_fh8e3"]
+[ext_resource type="Script" uid="uid://mi08ew36axyr" path="res://GrinchParkourMG/scripts/grinch.gd" id="1_fh8e3"]
+[ext_resource type="Texture2D" uid="uid://2nshxd83wqeb" path="res://GrinchParkourMG/assets/grinch-sprite-sheet.png" id="2_fh8e3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4tcex"]
 size = Vector2(341, 363)

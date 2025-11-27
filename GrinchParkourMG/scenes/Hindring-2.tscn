@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0q3scib3jp3d"]
 
-[ext_resource type="Texture2D" uid="uid://diu70k4txtn30" path="res://scenes/GrinchParkourMG/assets/Hindringer.png" id="1_j2mhb"]
+[ext_resource type="Texture2D" uid="uid://diu70k4txtn30" path="res://GrinchParkourMG/assets/Hindringer.png" id="1_j2mhb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w5i55"]
 size = Vector2(128, 106)
