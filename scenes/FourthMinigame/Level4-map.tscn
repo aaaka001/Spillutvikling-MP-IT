@@ -95,3 +95,7 @@ autostart = true
 
 [node name="Area2D" parent="." instance=ExtResource("6_qnh54")]
 position = Vector2(464, -28)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(573, 324)
+zoom = Vector2(1.68, 1.68)
