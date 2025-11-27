@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Nytt Spill-Prosjekt"
 run/main_scene="res://tug_of_war/tug_of_war.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -22,11 +22,10 @@ userGuess="*res://hangman/line_edit.gd"
 tug="*res://tug_of_war/tug.gd"
 level_manager="*res://ResultScreens/scripts/level_manager.gd"
 Minigame4="*res://scenes/FourthMinigame/minigame_4.gd"
+Global="*res://scripts/Global.gd"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -37,10 +36,6 @@ folder_colors={
 "res://ResultScreens/": "pink",
 "res://minigame-map-scenes/": "blue"
 }
-
-[autoload]
-
-Global="*res://scripts/Global.gd"
 
 [input]
 

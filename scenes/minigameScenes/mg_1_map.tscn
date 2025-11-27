@@ -26,12 +26,11 @@ sources/1 = SubResource("TileSetAtlasSource_4esan")
 size = Vector2(14, 164)
 
 [node name="MG1_MAP" type="Node2D"]
-position = Vector2(413, 381)
+position = Vector2(78, -78)
 script = ExtResource("1_gsf6n")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(496, 408)
-zoom = Vector2(1.66, 1.66)
 script = ExtResource("2_q25p4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -44,7 +43,7 @@ metadata/_edit_use_anchors_ = true
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(67112, 11133.173)
+position = Vector2(66777, 10674.173)
 scale = Vector2(432.3738, 432.3738)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
@@ -53,7 +52,7 @@ scale = Vector2(0.015591153, 0.016850699)
 texture = ExtResource("6_6ebtb")
 
 [node name="Clouds" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(897, 558)
+position = Vector2(562, 99)
 scale = Vector2(4.56, 4.56)
 motion_scale = Vector2(0.55, 0.55)
 
@@ -63,7 +62,7 @@ scale = Vector2(0.80200297, 1.218391)
 texture = ExtResource("2_oeudc")
 
 [node name="Mountains" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(346, 470)
+position = Vector2(11, 11)
 motion_scale = Vector2(0.7, 0.7)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Mountains"]
@@ -72,7 +71,7 @@ scale = Vector2(4.5, 3.0713036)
 texture = ExtResource("6_12wad")
 
 [node name="Trees" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(3409.56, 959.27997)
+position = Vector2(3074.56, 500.28)
 scale = Vector2(20.7936, 20.7936)
 motion_scale = Vector2(2, 2)
 
@@ -82,6 +81,7 @@ scale = Vector2(0.1394118, 0.18523508)
 texture = ExtResource("7_6ebtb")
 
 [node name="Snow" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-335, -459)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Snow"]
 position = Vector2(916.2045, 1034)
