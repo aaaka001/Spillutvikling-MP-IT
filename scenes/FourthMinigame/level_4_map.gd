@@ -3,10 +3,9 @@ extends Node2D
 func _ready():
 	var player = get_node("Root")
 	var timer = get_node("Timer")
-	timer.timeout.connect(Callable(player,"_on_timer_timeout"))
+	timer.timeout.connect(Callable(self,"_on_timer_timeout"))
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
