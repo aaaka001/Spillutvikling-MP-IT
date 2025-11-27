@@ -1,29 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7yqr56fiexmb"]
+[gd_scene load_steps=2 format=3 uid="uid://c8sjsqun751rl"]
 
-[ext_resource type="Script" uid="uid://do50v37mipttn" path="res://ResultScreens/scripts/result-function.gd" id="1_x5oxn"]
+[ext_resource type="Script" uid="uid://do50v37mipttn" path="res://ResultScreens/scripts/result-function.gd" id="1_2x7x6"]
 
-[node name="victory-screen" type="Control"]
+[node name="defeat-screen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_x5oxn")
+script = ExtResource("1_2x7x6")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture_filter = 2
-position = Vector2(973, 511.00003)
-scale = Vector2(1.4204305, 1.1191407)
+position = Vector2(975.00006, 509.00003)
+scale = Vector2(1.4204305, 1.1230471)
 
 [node name="Menu" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 163.00002
-offset_top = 901.00006
-offset_right = 171.00002
-offset_bottom = 909.00006
-scale = Vector2(55.4585, 15.497388)
+offset_left = 165.0
+offset_top = 869.99994
+offset_right = 173.0
+offset_bottom = 877.99994
+scale = Vector2(54.843006, 18.281284)
 
 [node name="Redo" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)

@@ -26,4 +26,4 @@ func _on_quit_pressed():
 	get_tree().quit()
 
 func _on_redo_pressed():
-	get_tree().change_scene_to_file("res://GrinchParkourMG/scenes/ParkourLevel.tscn")
+	level_manager.change_scene_to(level_manager.curent_scene_index)
