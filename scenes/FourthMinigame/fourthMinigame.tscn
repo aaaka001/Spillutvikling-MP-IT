@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cx8umn6mmqqsf"]
 
-[ext_resource type="Script" uid="uid://couqcwmghkjfx" path="res://scenes/FourthMinigame/fourth_minigame.gd" id="1_kvqsu"]
+[ext_resource type="Script" path="res://scenes/FourthMinigame/fourth_minigame.gd" id="1_kvqsu"]
 [ext_resource type="Texture2D" uid="uid://jgxuq8nsr1ov" path="res://scenes/FourthMinigame/sprite_06.png" id="2_kvqsu"]
-[ext_resource type="Script" uid="uid://c7gugbidn645x" path="res://scenes/FourthMinigame/pistolfeste.gd" id="3_y1du8"]
+[ext_resource type="Script" path="res://scenes/FourthMinigame/pistolfeste.gd" id="3_y1du8"]
 [ext_resource type="Texture2D" uid="uid://cw2j3wvyealrf" path="res://scenes/FourthMinigame/sprite_juleting14.png" id="4_kvqsu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hkdav"]
@@ -12,8 +12,8 @@ size = Vector2(282, 250.5)
 script = ExtResource("1_kvqsu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(122.30769, 116.95946)
-scale = Vector2(2.7067306, 2.1862333)
+position = Vector2(122.308, 116.959)
+scale = Vector2(2.70673, 2.18623)
 texture = ExtResource("2_kvqsu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -25,6 +25,6 @@ position = Vector2(166, 135)
 script = ExtResource("3_y1du8")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pistolfeste"]
-position = Vector2(23, -5.000004)
-scale = Vector2(0.3437392, 0.31895727)
+position = Vector2(23, -5)
+scale = Vector2(0.343739, 0.318957)
 texture = ExtResource("4_kvqsu")

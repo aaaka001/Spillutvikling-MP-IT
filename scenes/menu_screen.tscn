@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://cf1ou5tma5nba"]
+[gd_scene load_steps=4 format=3 uid="uid://cf1ou5tma5nba"]
 
-[ext_resource type="Script" path="res://scenes/menu_screen.gd" id="1_e6vgv"]
 [ext_resource type="Theme" uid="uid://d24nj8be86yrq" path="res://scenes/Theme_Menu.tres" id="1_yft84"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pn7wg"]
@@ -24,7 +23,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_e6vgv")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1

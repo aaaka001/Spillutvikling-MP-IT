@@ -1,22 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://dosvm5pmlmtvj"]
+[gd_scene load_steps=3 format=3 uid="uid://dosvm5pmlmtvj"]
 
-[ext_resource type="Script" path="res://scenes/start_screen.gd" id="1_phpgm"]
+[ext_resource type="Script" path="res://scenes/start_screen.gd" id="1_0il33"]
+[ext_resource type="Texture2D" uid="uid://cctoe1gyb0ha4" path="res://scenes/FourthMinigame/snow backgrund.png" id="1_muiib"]
 
 [node name="StartScreen" type="Node2D"]
-script = ExtResource("1_phpgm")
+script = ExtResource("1_0il33")
+
+[node name="SnowBackgrund" type="Sprite2D" parent="."]
+position = Vector2(958.5, 546)
+scale = Vector2(6.11182, 8.672)
+texture = ExtResource("1_muiib")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(100, 0)
-offset_left = 406.0
-offset_top = 163.0
-offset_right = 703.0
-offset_bottom = 390.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-alignment = 1
+offset_left = 509.0
+offset_top = 429.0
+offset_right = 1413.0
+offset_bottom = 497.0
+tooltip_text = "START"
 
-[node name="StartButton" type="Button" parent="VBoxContainer"]
+[node name="Startbutton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Start"
-
-[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+text = "START"
