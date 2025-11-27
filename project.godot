@@ -21,6 +21,7 @@ global="*res://hangman/global.gd"
 userGuess="*res://hangman/line_edit.gd"
 tug="*res://tug_of_war/tug.gd"
 level_manager="*res://ResultScreens/scripts/level_manager.gd"
+Minigame4="*res://scenes/FourthMinigame/minigame_4.gd"
 
 [display]
 
