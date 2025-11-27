@@ -1,6 +1,13 @@
+<<<<<<< HEAD:scenes/screens/victory_screen.tscn
+[gd_scene load_steps=3 format=3 uid="uid://chp4ersqo7oe2"]
+
+[ext_resource type="Script" uid="uid://do50v37mipttn" path="res://scripts/victory_screen.gd" id="1_ctq86"]
+[ext_resource type="Script" uid="uid://b4oomfqpspkd5" path="res://scenes/screens/label.gd" id="2_ilk3c"]
+=======
 [gd_scene load_steps=2 format=3 uid="uid://cex6wacsluwqs"]
 
 [ext_resource type="Script" uid="uid://do50v37mipttn" path="res://scripts/victory_screen.gd" id="1_2xyvd"]
+>>>>>>> 9626dc1fdefdc23334e19354a5d24023bbbdff47:scenes/screens/p2win.tscn
 
 [node name="VictoryScreen" type="Control"]
 layout_mode = 3
@@ -35,4 +42,9 @@ offset_top = 123.0
 offset_right = 524.0
 offset_bottom = 146.0
 scale = Vector2(2.4, 2.52)
+<<<<<<< HEAD:scenes/screens/victory_screen.tscn
+text = "You won!"
+script = ExtResource("2_ilk3c")
+=======
 text = "Player 2 wins"
+>>>>>>> 9626dc1fdefdc23334e19354a5d24023bbbdff47:scenes/screens/p2win.tscn

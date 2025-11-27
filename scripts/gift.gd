@@ -15,5 +15,6 @@ func _physics_process(delta: float) -> void:
 		queue_free()
 
 func _on_area_entered(other_area: Area2D) -> void:
+	queue_free()
 	if other_area.get_parent().name == "gift":
 		queue_free()  

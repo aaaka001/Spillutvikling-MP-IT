@@ -15,10 +15,3 @@ func _on_button_pressed() -> void:
 	level_manager.current_scene_index = 0
 	level_manager.change_scene_to(0)
 	#get_tree().change_scene_to_file("res://minigameScenes/first_mg.tscn")
-
-func _on_button_2_pressed() -> void:
-	get_tree().change_scene_to_file("res://minigameScenes/second_mg.tscn")
-
-
-func _on_button_3_pressed() -> void:
-	get_tree().change_scene_to_file("res://minigameScenes/third_mg.tscn")

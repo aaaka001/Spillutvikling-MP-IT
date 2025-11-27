@@ -38,6 +38,10 @@ folder_colors={
 "res://minigame-map-scenes/": "blue"
 }
 
+[autoload]
+
+Global="*res://scripts/Global.gd"
+
 [input]
 
 enter={
