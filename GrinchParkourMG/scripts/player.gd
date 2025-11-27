@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-const SPEED = 180
+const SPEED = 200
 const GRAVITY = 900
-const JUMP_FORCE = -350
+const JUMP_FORCE = -300
 
 func _physics_process(delta):
 	velocity.x = SPEED         # Spilleren løper automatisk fremover
