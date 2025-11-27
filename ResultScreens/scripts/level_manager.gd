@@ -1,8 +1,8 @@
 extends Node
 
 var scenes := [
-	"res://GrinchParkourMG/scenes/ParkourLevel.tscn",
-	
+	"res://minigame-map-scenes/Level4-map.tscn",
+	"res://minigame-map-scenes/ParkourLevel.tscn"
 ]
 
 var current_scene_index := 0
