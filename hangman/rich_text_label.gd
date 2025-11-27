@@ -16,6 +16,7 @@ var targetcomplete := str(selected_word)
 func _ready() -> void:
 	text = hidden_word
 	print(selected_word)
+	tug.previous_scene = get_tree().current_scene.scene_file_path
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,10 +24,10 @@ func _process(delta: float) -> void:
 	
 	if text == selected_word:
 		guessed == true
-		#changescene
+		get_tree().change_scene_to_file("res://scenes/screens/PlayerWin/p1win.tscn")
 	if liv == 0:
-		pass
-		#changescene
+		get_tree().change_scene_to_file("res://scenes/screens/PlayerWin/plose.tscn")
+		
 
 
 

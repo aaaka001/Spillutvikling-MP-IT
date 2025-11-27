@@ -1,17 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://jo54ku8bn0qq"]
+[gd_scene load_steps=7 format=3 uid="uid://c6iwf0fj72pe4"]
 
-[ext_resource type="Script" uid="uid://bx81nhgwro5jy" path="res://scenes/screens/PlayerWin/p_1_win.gd" id="1_s1tgf"]
-[ext_resource type="Texture2D" uid="uid://c4b5ecfq2o60k" path="res://scenes/screens/PlayerWin/winbg.png" id="2_q5bll"]
-[ext_resource type="Texture2D" uid="uid://dxjxq72kk6gvv" path="res://scenes/screens/PlayerWin/label.png" id="2_s1tgf"]
-[ext_resource type="Texture2D" uid="uid://c7dtefk0l28ld" path="res://scenes/screens/PlayerWin/button.png" id="2_xa6ih"]
-[ext_resource type="FontFile" uid="uid://c7ltpxfxcqx6d" path="res://tug_of_war/Minecraft.ttf" id="4_nvc14"]
+[ext_resource type="Script" uid="uid://bx81nhgwro5jy" path="res://scenes/screens/PlayerWin/p_1_win.gd" id="1_7k2a0"]
+[ext_resource type="Texture2D" uid="uid://c4b5ecfq2o60k" path="res://scenes/screens/PlayerWin/winbg.png" id="2_ca5ux"]
+[ext_resource type="Texture2D" uid="uid://c7dtefk0l28ld" path="res://scenes/screens/PlayerWin/button.png" id="3_jo20n"]
+[ext_resource type="Texture2D" uid="uid://dxjxq72kk6gvv" path="res://scenes/screens/PlayerWin/label.png" id="4_jkwj6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b136j"]
-atlas = ExtResource("2_xa6ih")
+atlas = ExtResource("3_jo20n")
 region = Rect2(17, 40, 62, 19)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s1tgf"]
-atlas = ExtResource("2_xa6ih")
+atlas = ExtResource("3_jo20n")
 region = Rect2(17, 40, 62, 19)
 
 [node name="VictoryScreen" type="Control"]
@@ -25,13 +24,13 @@ offset_right = 59.0
 offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_s1tgf")
+script = ExtResource("1_7k2a0")
 
 [node name="Winbg" type="Sprite2D" parent="."]
 modulate = Color(0.58707833, 0.58707833, 0.58707833, 1)
 position = Vector2(760, 420.50003)
 scale = Vector2(0.41666663, 0.35058597)
-texture = ExtResource("2_q5bll")
+texture = ExtResource("2_ca5ux")
 
 [node name="QuitButton" type="TextureButton" parent="."]
 layout_mode = 0
@@ -45,10 +44,9 @@ stretch_mode = 0
 [node name="Label" type="Label" parent="QuitButton"]
 layout_mode = 0
 offset_left = 27.0
-offset_top = 13.0
+offset_top = 9.0
 offset_right = 104.0
-offset_bottom = 39.0
-theme_override_fonts/font = ExtResource("4_nvc14")
+offset_bottom = 35.0
 theme_override_font_sizes/font_size = 14
 text = "Play again"
 
@@ -63,11 +61,10 @@ stretch_mode = 0
 
 [node name="Label" type="Label" parent="QuitButton3"]
 layout_mode = 0
-offset_left = 42.0
-offset_top = 12.0
-offset_right = 119.0
-offset_bottom = 38.0
-theme_override_fonts/font = ExtResource("4_nvc14")
+offset_left = 39.0
+offset_top = 7.0
+offset_right = 116.0
+offset_bottom = 33.0
 theme_override_font_sizes/font_size = 14
 text = "Menu"
 
@@ -86,7 +83,7 @@ offset_left = 628.0
 offset_top = 287.0
 offset_right = 908.0
 offset_bottom = 451.0
-texture_normal = ExtResource("2_s1tgf")
+texture_normal = ExtResource("4_jkwj6")
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
@@ -98,7 +95,7 @@ offset_right = 123.0
 offset_bottom = 68.0
 scale = Vector2(2.4, 2.52)
 theme_override_font_sizes/font_size = 11
-text = "Player 1 wins"
+text = "You Win!"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
