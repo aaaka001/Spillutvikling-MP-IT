@@ -1,5 +1,7 @@
 extends Node2D
 
+var score = 0
+
 func _ready():
 	var player = get_node("Root")
 	var timer = get_node("Timer")
@@ -11,4 +13,4 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	print("Timer finished")
-	get_tree().change_scene_to_file("res://scenes/screens/victory_screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/menu_screen.tscn")

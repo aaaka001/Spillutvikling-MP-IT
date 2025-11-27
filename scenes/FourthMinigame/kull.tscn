@@ -17,7 +17,7 @@ texture = ExtResource("2_no43b")
 shape = SubResource("CircleShape2D_kdgly")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 2.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
