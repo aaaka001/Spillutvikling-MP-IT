@@ -6,8 +6,8 @@
 [sub_resource type="GDScript" id="GDScript_rjxyt"]
 script/source = "extends Sprite2D
 
-var p1win = preload(\"res://scenes/screens/p1win.tscn\")
-var p2win = preload(\"res://scenes/screens/p2win.tscn\")
+var p1win = preload(\"res://scenes/screens/PlayerWin/p1win.tscn\") 
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -29,7 +29,7 @@ func _on_area_2d_2_area_shape_entered(area_rid: RID, area: Area2D, area_shape_in
 	if area.name == \"p2\":
 		get_tree().change_scene_to_packed(p1win)
 	if area.name == \"p1\":
-		get_tree().change_scene_to_packed(p2win)
+		get_tree().change_scene_to_packed(p1win)
 	
 "
 
