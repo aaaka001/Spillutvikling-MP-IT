@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7yqr56fiexmb"]
+
+[ext_resource type="Script" uid="uid://do50v37mipttn" path="res://ResultScreens/scripts/result-function.gd" id="1_x5oxn"]
+[ext_resource type="Texture2D" uid="uid://dmu1txiqjt2j0" path="res://ResultScreens/assets/victory-background.png" id="2_6dk6y"]
+
+[node name="victory-screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x5oxn")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 2
+position = Vector2(959.5, 518.00006)
+scale = Vector2(1.2649739, 1.1992188)
+texture = ExtResource("2_6dk6y")
+
+[node name="Menu" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 246.00002
+offset_top = 935.0
+offset_right = 254.00002
+offset_bottom = 943.0
+scale = Vector2(50.252193, 15.497388)
+
+[node name="Redo" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1188.0001
+offset_top = 917.99994
+offset_right = 1197.7216
+offset_bottom = 927.0743
+scale = Vector2(46.906796, 15.824035)
+
+[node name="Exit" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 729.0
+offset_top = 908.0
+offset_right = 737.0
+offset_bottom = 916.0
+scale = Vector2(48.019756, 20.718899)

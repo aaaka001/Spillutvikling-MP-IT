@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jgxuq8nsr1ov"
-path="res://.godot/imported/sprite_06.png-1267edf6a67432412fe66760c9e55d94.ctex"
+uid="uid://i1wmoj34nr0k"
+path="res://.godot/imported/bakgrunn.png-d1c51032ad5226402d17c2d2e304ef28.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/FourthMinigame/sprite_06.png"
-dest_files=["res://.godot/imported/sprite_06.png-1267edf6a67432412fe66760c9e55d94.ctex"]
+source_file="res://GrinchParkourMG/assets/bakgrunn.png"
+dest_files=["res://.godot/imported/bakgrunn.png-d1c51032ad5226402d17c2d2e304ef28.ctex"]
 
 [params]
 
