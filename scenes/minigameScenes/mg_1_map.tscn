@@ -82,7 +82,7 @@ position = Vector2(66766, 10663.173)
 scale = Vector2(432.3738, 432.3738)
 motion_scale = Vector2(1.5, 1.5)
 
-[node name="Sprite2d" type="Sprite2D" parent="ParallaxBackground/Snow"]
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Snow"]
 position = Vector2(-153.0944, -23.348253)
 scale = Vector2(0.008349737, 0.008197267)
 texture = ExtResource("5_xjeuy")
