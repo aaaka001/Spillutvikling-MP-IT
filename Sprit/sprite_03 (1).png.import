@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4cxvi3axhyf8"
-path="res://.godot/imported/output.jpg-42592ec7b020f5fae059a0ea45af361e.ctex"
+uid="uid://drui5ic7bpjq1"
+path="res://.godot/imported/sprite_03 (1).png-2cf762edd777078da625f10e4c02bd65.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tug_of_war/output.jpg"
-dest_files=["res://.godot/imported/output.jpg-42592ec7b020f5fae059a0ea45af361e.ctex"]
+source_file="res://Sprit/sprite_03 (1).png"
+dest_files=["res://.godot/imported/sprite_03 (1).png-2cf762edd777078da625f10e4c02bd65.ctex"]
 
 [params]
 

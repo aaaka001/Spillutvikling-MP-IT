@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4cxvi3axhyf8"
-path="res://.godot/imported/output.jpg-42592ec7b020f5fae059a0ea45af361e.ctex"
+uid="uid://c5lkso8hqu1o"
+path="res://.godot/imported/redgodot.webp-01aace5d403dacf32894545033ee55ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tug_of_war/output.jpg"
-dest_files=["res://.godot/imported/output.jpg-42592ec7b020f5fae059a0ea45af361e.ctex"]
+source_file="res://redgodot.webp"
+dest_files=["res://.godot/imported/redgodot.webp-01aace5d403dacf32894545033ee55ae.ctex"]
 
 [params]
 

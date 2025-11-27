@@ -1,17 +1,66 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqw3wlphgxyjm"]
+[gd_scene load_steps=12 format=3 uid="uid://rli145wb33rv"]
 
 [ext_resource type="Script" uid="uid://bqnc6aaiqyv57" path="res://scripts/menu_screen.gd" id="1_e6vgv"]
 [ext_resource type="Theme" uid="uid://d24nj8be86yrq" path="res://scenes/Theme_Menu.tres" id="1_yft84"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pn7wg"]
-bg_color = Color(0, 0.827448, 0.191791, 0.654902)
+bg_color = Color(0, 0.82744765, 0.19179122, 0.654902)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0m60l"]
+bg_color = Color(0.42171934, 0.66277915, 0.5258553, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_73fcp"]
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e6vgv"]
+bg_color = Color(3.272891e-06, 0.6305222, 0.97671455, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gld7y"]
+bg_color = Color(0.39278632, 0.6451316, 0.7112939, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ar34o"]
 corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sm2ni"]
-bg_color = Color(0.929634, 0.307432, 0.325732, 1)
+bg_color = Color(0.92963415, 0.30743247, 0.3257325, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2cvw"]
+bg_color = Color(0.8032621, 0.50623, 0.5118197, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amt2q"]
 corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
@@ -33,13 +82,17 @@ anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 59.0
 offset_top = -111.25
-offset_right = 336.213
+offset_right = 336.21313
 offset_bottom = 111.25
 grow_vertical = 2
 theme = ExtResource("1_yft84")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_pn7wg")
-text = "First minigame"
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0m60l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_73fcp")
+text = "Gift Run!
+-Aayan"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 1
@@ -48,10 +101,14 @@ anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 820.0
 offset_top = -111.25
-offset_right = 1097.21
+offset_right = 1097.2131
 offset_bottom = 111.25
 grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_e6vgv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gld7y")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ar34o")
 text = "Third minigame"
 
 [node name="Button3" type="Button" parent="."]
@@ -61,14 +118,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -138.607
+offset_left = -138.60657
 offset_top = -111.25
-offset_right = 138.607
+offset_right = 138.60657
 offset_bottom = 111.25
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_sm2ni")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g2cvw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_amt2q")
 text = "Second minigame"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

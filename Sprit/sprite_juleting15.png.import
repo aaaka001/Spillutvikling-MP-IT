@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4cxvi3axhyf8"
-path="res://.godot/imported/output.jpg-42592ec7b020f5fae059a0ea45af361e.ctex"
+uid="uid://desadurtqv8yk"
+path="res://.godot/imported/sprite_juleting15.png-9ce3e6ab166968cdbb2f27b4f523d822.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tug_of_war/output.jpg"
-dest_files=["res://.godot/imported/output.jpg-42592ec7b020f5fae059a0ea45af361e.ctex"]
+source_file="res://Sprit/sprite_juleting15.png"
+dest_files=["res://.godot/imported/sprite_juleting15.png-9ce3e6ab166968cdbb2f27b4f523d822.ctex"]
 
 [params]
 
