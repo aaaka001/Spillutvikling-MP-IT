@@ -1,13 +1,18 @@
-[gd_scene load_steps=12 format=3 uid="uid://5g1ygo7xq5b6"]
+[gd_scene load_steps=17 format=3 uid="uid://5g1ygo7xq5b6"]
 
 [ext_resource type="Texture2D" uid="uid://btmmjn113kqlc" path="res://snow backgrund.png" id="1_11cdo"]
-[ext_resource type="Script" path="res://scenes/minigameScenes/mg_1_map.gd" id="1_gsf6n"]
+[ext_resource type="Script" uid="uid://cb0yytd5i5bd4" path="res://scenes/minigameScenes/mg_1_map.gd" id="1_gsf6n"]
 [ext_resource type="PackedScene" uid="uid://couflduugxhfk" path="res://scenes/minigameScenes/first_mg.tscn" id="2_gsf6n"]
 [ext_resource type="Texture2D" uid="uid://di2377sl5ljvw" path="res://snow-backgrund_0003_CLOUDS.png" id="2_oeudc"]
+[ext_resource type="Script" uid="uid://dwuj3umijnbgy" path="res://scenes/minigameScenes/camera_2d.gd" id="2_q25p4"]
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="3_oeudc"]
 [ext_resource type="PackedScene" uid="uid://3w2e6dx201hl" path="res://scenes/coal.tscn" id="4_q25p4"]
 [ext_resource type="PackedScene" uid="uid://dcehpx38hidjl" path="res://scenes/gift.tscn" id="5_iux6t"]
+[ext_resource type="Texture2D" uid="uid://bdolquc60bwid" path="res://snow-backgrund_0001_SNOW.png" id="5_xjeuy"]
+[ext_resource type="Texture2D" uid="uid://6awm8kj1n21v" path="res://snow-backgrund_0004_SKY.png" id="6_6ebtb"]
+[ext_resource type="Texture2D" uid="uid://bkt2fuw1m6wm2" path="res://snow-backgrund_0002_MOUNTAINS.png" id="6_12wad"]
 [ext_resource type="Script" path="res://scenes/label.gd" id="6_xjeuy"]
+[ext_resource type="Texture2D" uid="uid://elkbkb01dtbq" path="res://snow-backgrund_0000_TREES.png" id="7_6ebtb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4esan"]
 texture = ExtResource("1_11cdo")
@@ -23,19 +28,64 @@ size = Vector2(14, 164)
 [node name="MG1_MAP" type="Node2D"]
 script = ExtResource("1_gsf6n")
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-visible = false
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(61, 56)
-texture = ExtResource("2_oeudc")
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(567, 318)
+script = ExtResource("2_q25p4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 offset_right = 1145.0
 offset_bottom = 643.0
 texture = ExtResource("1_11cdo")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(66766, 10663.173)
+scale = Vector2(432.3738, 432.3738)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
+position = Vector2(-152.99031, -23.933395)
+scale = Vector2(0.015591153, 0.016850699)
+texture = ExtResource("6_6ebtb")
+
+[node name="Clouds" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(551, 88)
+scale = Vector2(4.56, 4.56)
+motion_scale = Vector2(0.55, 0.55)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Clouds"]
+position = Vector2(3.0701752, 2.4122806)
+scale = Vector2(0.80200297, 1.218391)
+texture = ExtResource("2_oeudc")
+
+[node name="Mountains" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.7, 0.7)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Mountains"]
+position = Vector2(560, 501)
+scale = Vector2(4.5, 3.0713036)
+texture = ExtResource("6_12wad")
+
+[node name="Trees" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(3063.56, 489.28)
+scale = Vector2(20.7936, 20.7936)
+motion_scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Trees"]
+position = Vector2(-116.74554, 1.044552)
+scale = Vector2(0.1394118, 0.18523508)
+texture = ExtResource("7_6ebtb")
+
+[node name="Snow" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(66766, 10663.173)
+scale = Vector2(432.3738, 432.3738)
+motion_scale = Vector2(1.5, 1.5)
+
+[node name="Sprite2d" type="Sprite2D" parent="ParallaxBackground/Snow"]
+position = Vector2(-153.0944, -23.348253)
+scale = Vector2(0.008349737, 0.008197267)
+texture = ExtResource("5_xjeuy")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_uwkpl")
