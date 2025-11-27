@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2jul1s7kf6ij"]
+
+[ext_resource type="Texture2D" uid="uid://6xpquualsd3e" path="res://scenes/screens/menu/menubg.png" id="1_2cnvh"]
+[ext_resource type="Script" path="res://scenes/menu_screen.gd" id="2_uuqej"]
+
+[node name="GameMenu" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2cnvh")
+script = ExtResource("2_uuqej")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
