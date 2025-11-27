@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dr8rrklxw2nxl"]
+[gd_scene load_steps=6 format=3 uid="uid://dr8rrklxw2nxl"]
 
 [ext_resource type="PackedScene" uid="uid://d2aclot747p23" path="res://GrinchParkourMG/scenes/Player.tscn" id="1_jlb33"]
 [ext_resource type="PackedScene" uid="uid://fks2eswgtf25" path="res://GrinchParkourMG/scenes/Grinch.tscn" id="2_qg6j6"]
 [ext_resource type="PackedScene" uid="uid://biro4u0n833we" path="res://GrinchParkourMG/scenes/background_parkour.tscn" id="3_cuplw"]
+[ext_resource type="PackedScene" uid="uid://bu8mxo6vfblc4" path="res://GrinchParkourMG/scenes/Hindring-1.tscn" id="4_cs1dp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53h3h"]
 size = Vector2(5775.4346, 85.90515)
@@ -29,6 +30,7 @@ scale = Vector2(1.307, 1.307)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(492.3462, -255.49219)
 scale = Vector2(1.0000001, 1.0000001)
+limit_top = -500
 
 [node name="Grinch" parent="." instance=ExtResource("2_qg6j6")]
 z_index = 200
@@ -36,9 +38,12 @@ position = Vector2(-1727.6193, 549.52374)
 scale = Vector2(0.29, 0.325)
 
 [node name="Background-Parkour" parent="." instance=ExtResource("3_cuplw")]
-position = Vector2(-977.14294, 174.28577)
+position = Vector2(-977.14307, 147.61903)
 scale = Vector2(1.31, 1.31)
 
 [node name="Background-Parkour2" parent="." instance=ExtResource("3_cuplw")]
-position = Vector2(13848.573, 174.28577)
+position = Vector2(13848.573, 147.6191)
 scale = Vector2(1.31, 1.31)
+
+[node name="Hindring 1" parent="." instance=ExtResource("4_cs1dp")]
+position = Vector2(-1069.5238, 557.14294)
