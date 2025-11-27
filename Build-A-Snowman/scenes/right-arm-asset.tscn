@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://ylo6fwxg3gji"]
+
+[ext_resource type="Script" uid="uid://jq577c264mx" path="res://Build-A-Snowman/scenes/draggable.gd" id="1_tgdu4"]
+[ext_resource type="Texture2D" uid="uid://cirdhldnbjtc3" path="res://Build-A-Snowman/assets/accessories.png" id="2_vee32"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f0a6p"]
+radius = 63.702435
+
+[node name="Area2D" type="Area2D"]
+scale = Vector2(1.6399995, 1.6399995)
+script = ExtResource("1_tgdu4")
+correct_slot = "right"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.032257, 12.096769)
+texture = ExtResource("2_vee32")
+region_enabled = true
+region_rect = Rect2(327.61514, 157.65251, 141.57611, 104.92442)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 8)
+shape = SubResource("CircleShape2D_f0a6p")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

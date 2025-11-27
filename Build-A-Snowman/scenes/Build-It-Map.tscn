@@ -1,3 +1,66 @@
-[gd_scene format=3 uid="uid://c34l4ql8qmgl1"]
+[gd_scene load_steps=7 format=3 uid="uid://c34l4ql8qmgl1"]
+
+[ext_resource type="Texture2D" uid="uid://cybqvpqty74ef" path="res://Build-A-Snowman/assets/map.png" id="1_8jopi"]
+[ext_resource type="Script" uid="uid://2iwsmccq4l63" path="res://Build-A-Snowman/scenes/slot.gd" id="2_1n83p"]
+[ext_resource type="PackedScene" uid="uid://duh0kxs1rnofd" path="res://Build-A-Snowman/scenes/hat-asset.tscn" id="2_t1u0p"]
+[ext_resource type="PackedScene" uid="uid://ylo6fwxg3gji" path="res://Build-A-Snowman/scenes/right-arm-asset.tscn" id="4_p83jj"]
+[ext_resource type="PackedScene" uid="uid://bffseslbqyf4q" path="res://Build-A-Snowman/scenes/left-arm-asset.tscn" id="5_t4wf2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8jopi"]
 
 [node name="BuildItMap" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(961, 533)
+scale = Vector2(1.2515104, 1.1621094)
+texture = ExtResource("1_8jopi")
+
+[node name="Head - Slot" type="Area2D" parent="."]
+position = Vector2(868, 203)
+scale = Vector2(-11.305895, 8.413069)
+script = ExtResource("2_1n83p")
+slot_id = "head"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Head - Slot"]
+position = Vector2(0.59156877, -14.593546)
+scale = Vector2(0.7870352, 1)
+shape = SubResource("CircleShape2D_8jopi")
+
+[node name="Right-Arm - Slot" type="Area2D" parent="."]
+position = Vector2(1072, 577)
+scale = Vector2(-6.985895, 4.406967)
+script = ExtResource("2_1n83p")
+slot_id = "right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right-Arm - Slot"]
+position = Vector2(0.59156877, -14.593546)
+scale = Vector2(0.7870352, 1)
+shape = SubResource("CircleShape2D_8jopi")
+
+[node name="Left-Arm - Slot" type="Area2D" parent="."]
+position = Vector2(641.99994, 577)
+scale = Vector2(-6.993778, 4.406967)
+script = ExtResource("2_1n83p")
+slot_id = "left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left-Arm - Slot"]
+position = Vector2(0.59156877, -14.593546)
+scale = Vector2(0.7870352, 1)
+shape = SubResource("CircleShape2D_8jopi")
+
+[node name="Hat - Asset" parent="." instance=ExtResource("2_t1u0p")]
+position = Vector2(1647, 222.00003)
+scale = Vector2(2.5387306, 2.5387306)
+
+[node name="Area2D" parent="." instance=ExtResource("4_p83jj")]
+position = Vector2(1368, 86)
+
+[node name="Area2D2" parent="." instance=ExtResource("5_t4wf2")]
+position = Vector2(1725, 637)
+
+[connection signal="area_entered" from="Head - Slot" to="Head - Slot" method="_on_area_entered"]
+[connection signal="area_exited" from="Head - Slot" to="Head - Slot" method="_on_area_exited"]
+[connection signal="area_entered" from="Right-Arm - Slot" to="Right-Arm - Slot" method="_on_area_entered"]
+[connection signal="area_exited" from="Right-Arm - Slot" to="Right-Arm - Slot" method="_on_area_exited"]
+[connection signal="area_entered" from="Left-Arm - Slot" to="Left-Arm - Slot" method="_on_area_entered"]
+[connection signal="area_exited" from="Left-Arm - Slot" to="Left-Arm - Slot" method="_on_area_exited"]
