@@ -10,7 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://c0d3ljb43mppy" path="res://Build-A-Snowman/assets/christmas-background-music-434626.mp3" id="6_6oaxw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8jopi"]
-radius = 13.5391245
+radius = 12.958758
 
 [node name="BuildItMap" type="Node2D"]
 
@@ -22,9 +22,9 @@ texture = ExtResource("1_8jopi")
 [node name="Slots" type="Node2D" parent="."]
 
 [node name="Head - Slot" type="Area2D" parent="Slots"]
-position = Vector2(868, 203)
+position = Vector2(855.00006, 216.00002)
 rotation = -3.1415925
-scale = Vector2(11.305895, -8.413069)
+scale = Vector2(14.433462, -8.328703)
 script = ExtResource("2_1n83p")
 slot_id = "head"
 
@@ -81,20 +81,20 @@ position = Vector2(0.59156877, -14.593546)
 scale = Vector2(0.7870352, 1)
 shape = SubResource("CircleShape2D_8jopi")
 
-[node name="Area2D" parent="Slots" instance=ExtResource("4_p83jj")]
-position = Vector2(1464, 872)
-
-[node name="Area2D2" parent="Slots" instance=ExtResource("4_l2h8u")]
-position = Vector2(1361, 667)
-
 [node name="Draggables" type="Node2D" parent="."]
 
+[node name="Buttons - Asset" parent="Draggables" instance=ExtResource("4_l2h8u")]
+position = Vector2(1361, 667)
+
+[node name="Carrot - Asset" parent="Draggables" instance=ExtResource("4_p83jj")]
+position = Vector2(1559, 893)
+
 [node name="Hat - Asset" parent="Draggables" instance=ExtResource("2_t1u0p")]
-position = Vector2(1647, 222.00003)
+position = Vector2(1690, 176)
 scale = Vector2(2.5387306, 2.5387306)
 
 [node name="Right-Arm - Asset" parent="Draggables" instance=ExtResource("5_1m1fq")]
-position = Vector2(1368, 86)
+position = Vector2(1318, 178)
 
 [node name="Left-Arm - Asset" parent="Draggables" instance=ExtResource("5_t4wf2")]
 position = Vector2(1725, 637)
