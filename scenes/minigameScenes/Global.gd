@@ -16,4 +16,5 @@ func add_score(amount: int):
 
 func update_score():
 	if score_label:
-		self.text = "Score: " + str(score)
+		pass
+#		self.text = "Score: " + str(score)
