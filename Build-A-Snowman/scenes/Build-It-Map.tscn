@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c34l4ql8qmgl1"]
+[gd_scene load_steps=14 format=3 uid="uid://c34l4ql8qmgl1"]
 
 [ext_resource type="Texture2D" uid="uid://cybqvpqty74ef" path="res://Build-A-Snowman/assets/map.png" id="1_8jopi"]
 [ext_resource type="Script" uid="uid://2iwsmccq4l63" path="res://Build-A-Snowman/scripts/slot.gd" id="2_1n83p"]
@@ -8,11 +8,22 @@
 [ext_resource type="PackedScene" uid="uid://ylo6fwxg3gji" path="res://Build-A-Snowman/scenes/right-arm-asset.tscn" id="5_1m1fq"]
 [ext_resource type="PackedScene" uid="uid://bffseslbqyf4q" path="res://Build-A-Snowman/scenes/left-arm-asset.tscn" id="5_t4wf2"]
 [ext_resource type="AudioStream" uid="uid://c0d3ljb43mppy" path="res://Build-A-Snowman/assets/christmas-background-music-434626.mp3" id="6_6oaxw"]
+[ext_resource type="Script" uid="uid://bopee568w26pp" path="res://Build-A-Snowman/scenes/music_button.gd" id="9_nonqj"]
+[ext_resource type="Texture2D" uid="uid://c5e5a0lcv3py4" path="res://Build-A-Snowman/assets/Volume-UI.png" id="10_wc5sn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8jopi"]
 radius = 12.958758
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wc5sn"]
+atlas = ExtResource("10_wc5sn")
+region = Rect2(760.06287, 260.48102, 675.67834, 520.8974)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfoy2"]
+atlas = ExtResource("10_wc5sn")
+region = Rect2(106.212585, 263.45758, 632.0222, 509.98334)
+
 [node name="BuildItMap" type="Node2D"]
+position = Vector2(-5, 10)
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(961, 533)
@@ -22,7 +33,7 @@ texture = ExtResource("1_8jopi")
 [node name="Slots" type="Node2D" parent="."]
 
 [node name="Head - Slot" type="Area2D" parent="Slots"]
-position = Vector2(855.00006, 216.00002)
+position = Vector2(855.00006, 206.00002)
 rotation = -3.1415925
 scale = Vector2(14.433462, -8.328703)
 script = ExtResource("2_1n83p")
@@ -91,7 +102,7 @@ position = Vector2(1559, 893)
 
 [node name="Hat - Asset" parent="Draggables" instance=ExtResource("2_t1u0p")]
 position = Vector2(1690, 176)
-scale = Vector2(2.5387306, 2.5387306)
+scale = Vector2(2.5387306, 2.593513)
 
 [node name="Right-Arm - Asset" parent="Draggables" instance=ExtResource("5_1m1fq")]
 position = Vector2(1318, 178)
@@ -99,7 +110,7 @@ position = Vector2(1318, 178)
 [node name="Left-Arm - Asset" parent="Draggables" instance=ExtResource("5_t4wf2")]
 position = Vector2(1725, 637)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_6oaxw")
 autoplay = true
 
@@ -108,12 +119,17 @@ wait_time = 6.23
 one_shot = true
 autostart = true
 
-[node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 57.0
-offset_top = 34.0
-offset_right = 97.0
-offset_bottom = 74.0
-scale = Vector2(3.439997, 2.400001)
+[node name="MusicButton" type="TextureButton" parent="."]
+offset_left = 19.000006
+offset_top = 11.999985
+offset_right = 664.0
+offset_bottom = 589.0
+scale = Vector2(0.17800085, 0.16814372)
+toggle_mode = true
+script = ExtResource("9_nonqj")
+atlas_on = SubResource("AtlasTexture_wc5sn")
+atlas_off = SubResource("AtlasTexture_kfoy2")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="area_entered" from="Slots/Head - Slot" to="Slots/Head - Slot" method="_on_area_entered"]
 [connection signal="area_exited" from="Slots/Head - Slot" to="Slots/Head - Slot" method="_on_area_exited"]
@@ -126,3 +142,5 @@ scale = Vector2(3.439997, 2.400001)
 [connection signal="area_entered" from="Slots/Left-Arm - Slot" to="Slots/Left-Arm - Slot" method="_on_area_entered"]
 [connection signal="area_exited" from="Slots/Left-Arm - Slot" to="Slots/Left-Arm - Slot" method="_on_area_exited"]
 [connection signal="timeout" from="timer" to="Slots/Head - Slot" method="_on_timer_timeout"]
+[connection signal="pressed" from="MusicButton" to="Slots/Head - Slot" method="_on_music_button_pressed"]
+[connection signal="toggled" from="MusicButton" to="MusicButton" method="_on_toggled"]

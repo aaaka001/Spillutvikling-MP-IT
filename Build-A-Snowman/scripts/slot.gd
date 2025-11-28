@@ -11,3 +11,7 @@ func _on_area_exited(area):
 
 func _on_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://ResultScreens/scenes/defeat-screen.tscn")
+
+
+func _on_music_button_pressed() -> void:
+	pass # Replace with function body.
