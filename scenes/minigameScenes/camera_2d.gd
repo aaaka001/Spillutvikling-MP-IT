@@ -1,8 +1,6 @@
 extends Camera2D
 
-@export var player: Node2D
-@export var left_limit: Node2D
-@export var right_limit: Node2D
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -10,15 +8,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
-	if player == null or left_limit == null or right_limit == null:
-		return
-		
-	var target_x = player.global_position.x
-	var min_x = left_limit.global_position.x
-	var max_x = right_limit.global_position.x
-	
-	global_position.x = clamp(target_x, min_x, max_x)
 
 	
 	var input := 0

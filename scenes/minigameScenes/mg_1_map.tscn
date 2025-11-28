@@ -12,9 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://6awm8kj1n21v" path="res://snow-backgrund_0004_SKY.png" id="6_6ebtb"]
 [ext_resource type="Texture2D" uid="uid://bkt2fuw1m6wm2" path="res://snow-backgrund_0002_MOUNTAINS.png" id="6_12wad"]
 [ext_resource type="Texture2D" uid="uid://elkbkb01dtbq" path="res://snow-backgrund_0000_TREES.png" id="7_6ebtb"]
-[ext_resource type="Script" uid="uid://b440bmxieiumr" path="res://scenes/minigameScenes/collision_shape_2d_3.gd" id="10_w2g7r"]
-[ext_resource type="Script" uid="uid://iop3gjbjaqc2" path="res://scenes/minigameScenes/collision_shape_2d_2.gd" id="11_laoid"]
-[ext_resource type="Script" uid="uid://dxe6k5b0eb050" path="res://scenes/minigameScenes/Global.gd" id="15_laoid"]
+[ext_resource type="Script" path="res://scenes/minigameScenes/collision_shape_2d_3.gd" id="10_w2g7r"]
+[ext_resource type="Script" path="res://scenes/minigameScenes/collision_shape_2d_2.gd" id="11_laoid"]
+[ext_resource type="Script" uid="uid://dxe6k5b0eb050" path="res://scripts/Global.gd" id="15_laoid"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4esan"]
 texture = ExtResource("1_11cdo")
@@ -125,12 +125,6 @@ script = ExtResource("11_laoid")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-5, 6)
 polygon = PackedVector2Array(2, 1, 149, 0, 284, -4, 408, -11, 622, -8, 714, -26, 784, -36, 847, -40, 882, -43, 925, -53, 977, -70, 1030, -87, 1083, -115, 1132, -128, 1131, 22, -2, 24)
-
-[node name="LeftLimit" type="Node2D" parent="StaticBody2D"]
-position = Vector2(-12, -40)
-
-[node name="RightLimit" type="Node2D" parent="StaticBody2D"]
-position = Vector2(1132, -152)
 
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2(-67, 89)
