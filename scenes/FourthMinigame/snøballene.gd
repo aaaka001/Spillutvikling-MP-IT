@@ -10,10 +10,11 @@ func _physics_process(delta):
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	Minigame4.update_points(1)
+#	Minigame4.update_points(1)
 	body.queue_free()
 	queue_free()
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	Minigame4.update_points(-1)
+	print("KULL")
+	get_tree().change_scene_to_file("res://minigame-map-scenes/Level4-map.tscn")

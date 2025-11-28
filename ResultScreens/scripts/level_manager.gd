@@ -2,7 +2,7 @@ extends Node
 
 var scenes := [
 	"res://minigame-map-scenes/Level4-map.tscn",
-	"res://minigame-map-scenes/ParkourLevel.tscn"
+	"res://Build-A-Snowman/scenes/How-To-Play.tscn"
 ]
 
 var current_scene_index := 0

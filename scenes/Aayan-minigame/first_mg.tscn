@@ -52,6 +52,15 @@ scale = Vector2(2.125, 2.125)
 sprite_frames = SubResource("SpriteFrames_7y2eh")
 animation = &"walk"
 
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D/Sprite"]
+visible = false
+position = Vector2(58.82353, -64.47059)
+scale = Vector2(0.92856395, 1.146196)
+ignore_rotation = false
+enabled = false
+zoom = Vector2(1.2, 1.2)
+limit_enabled = false
+
 [node name="CatchArea" type="Area2D" parent="CharacterBody2D"]
 position = Vector2(1873.2922, 1766.625)
 scale = Vector2(5.098923, 5.098923)

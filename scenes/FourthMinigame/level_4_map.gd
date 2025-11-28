@@ -12,5 +12,6 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_timer_timeout() -> void:
+	tug.previous_scene = get_tree().current_scene.scene_file_path
 	print("Timer finished")
-	get_tree().change_scene_to_file("res://scenes/menu_screen.tscn")
+	get_tree().change_scene_to_file("res://ResultScreens/scenes/defeat-screen.tscn")
