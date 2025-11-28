@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cx8umn6mmqqsf" path="res://scenes/FourthMinigame/fourthMinigame.tscn" id="3_g4x5a"]
 [ext_resource type="PackedScene" uid="uid://dsh6d4nmqru5y" path="res://scenes/FourthMinigame/Shoot-at.tscn" id="4_b5ww1"]
 [ext_resource type="PackedScene" uid="uid://cigglxbemg27l" path="res://scenes/FourthMinigame/Grønn-Gave.tscn" id="5_ondbm"]
-[ext_resource type="PackedScene" uid="uid://7eopjsrkqod" path="res://scenes/FourthMinigame/kull.tscn" id="6_keo7n"]
+[ext_resource type="PackedScene" path="res://scenes/FourthMinigame/kull.tscn" id="6_keo7n"]
 
 [sub_resource type="TileSet" id="TileSet_n0kml"]
 tile_size = Vector2i(128, 128)
