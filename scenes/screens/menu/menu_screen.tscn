@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://b2jul1s7kf6ij"]
 
 [ext_resource type="Texture2D" uid="uid://6xpquualsd3e" path="res://scenes/screens/menu/menubg.png" id="1_2cnvh"]
-[ext_resource type="Script" path="res://scenes/menu_screen.gd" id="2_uuqej"]
+[ext_resource type="Script" uid="uid://b1bqaufv0f1cc" path="res://scenes/menu_screen.gd" id="2_uuqej"]
 [ext_resource type="Script" uid="uid://ca0nk0a5yo3bp" path="res://scenes/screens/menu/texture_rect.gd" id="3_7oxk0"]
 [ext_resource type="Texture2D" uid="uid://c7dtefk0l28ld" path="res://scenes/screens/PlayerWin/button.png" id="3_60e05"]
 [ext_resource type="FontFile" uid="uid://c7ltpxfxcqx6d" path="res://tug_of_war/Minecraft.ttf" id="4_7oxk0"]
