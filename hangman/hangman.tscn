@@ -30,7 +30,7 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[node name="Hangman" type="Control"]
+[node name="Hangman2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -103,6 +103,10 @@ position = Vector2(39, 41.999996)
 scale = Vector2(0.14941405, 0.21721311)
 texture = ExtResource("6_kfbk1")
 script = ExtResource("7_nvdk2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(572, 321)
+zoom = Vector2(1.68, 1.68)
 
 [connection signal="text_submitted" from="userInput" to="generatedWord" method="_on_line_edit_text_submitted"]
 [connection signal="text_submitted" from="userInput" to="healthbar" method="_on_user_input_text_submitted"]

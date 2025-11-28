@@ -17,7 +17,7 @@ func shoot_game(event: InputEvent) -> void:
 
 func hangman(event: InputEvent) -> void:
 	if Input.is_action_just_released("press"):
-		get_tree().change_scene_to_file("res://hangman/hangman.tscn")
+		get_tree().change_scene_to_file("res://hangman.tscn")
 
 func diona_spill(event: InputEvent) -> void:
 	if Input.is_action_just_released("press"):
