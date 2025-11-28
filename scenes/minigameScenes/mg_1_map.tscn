@@ -12,9 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://6awm8kj1n21v" path="res://snow-backgrund_0004_SKY.png" id="6_6ebtb"]
 [ext_resource type="Texture2D" uid="uid://bkt2fuw1m6wm2" path="res://snow-backgrund_0002_MOUNTAINS.png" id="6_12wad"]
 [ext_resource type="Texture2D" uid="uid://elkbkb01dtbq" path="res://snow-backgrund_0000_TREES.png" id="7_6ebtb"]
-[ext_resource type="Script" uid="uid://b440bmxieiumr" path="res://scenes/minigameScenes/collision_shape_2d_3.gd" id="10_w2g7r"]
-[ext_resource type="Script" uid="uid://iop3gjbjaqc2" path="res://scenes/minigameScenes/collision_shape_2d_2.gd" id="11_laoid"]
-[ext_resource type="Script" uid="uid://dxe6k5b0eb050" path="res://scenes/minigameScenes/Global.gd" id="15_laoid"]
+[ext_resource type="Script" path="res://scenes/minigameScenes/collision_shape_2d_3.gd" id="10_w2g7r"]
+[ext_resource type="Script" path="res://scenes/minigameScenes/collision_shape_2d_2.gd" id="11_laoid"]
+[ext_resource type="Script" uid="uid://dxe6k5b0eb050" path="res://scripts/Global.gd" id="15_laoid"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4esan"]
 texture = ExtResource("1_11cdo")
@@ -33,6 +33,8 @@ script = ExtResource("1_gsf6n")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(496, 408)
+limit_left = 0
+limit_right = 1100
 script = ExtResource("2_q25p4")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]

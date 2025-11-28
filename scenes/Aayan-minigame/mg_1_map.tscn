@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://btmmjn113kqlc" path="res://snow backgrund.png" id="1_11cdo"]
 [ext_resource type="Script" uid="uid://cb0yytd5i5bd4" path="res://scenes/minigameScenes/mg_1_map.gd" id="1_gsf6n"]
-[ext_resource type="PackedScene" uid="uid://couflduugxhfk" path="res://scenes/minigameScenes/first_mg.tscn" id="2_gsf6n"]
+[ext_resource type="PackedScene" uid="uid://couflduugxhfk" path="res://scenes/Aayan-minigame/first_mg.tscn" id="2_gsf6n"]
 [ext_resource type="Texture2D" uid="uid://di2377sl5ljvw" path="res://snow-backgrund_0003_CLOUDS.png" id="2_oeudc"]
 [ext_resource type="Script" uid="uid://dwuj3umijnbgy" path="res://scenes/minigameScenes/camera_2d.gd" id="2_q25p4"]
 [ext_resource type="Script" uid="uid://bainn123pqfck" path="res://scripts/spawner.gd" id="3_oeudc"]
@@ -78,14 +78,29 @@ scale = Vector2(0.1394118, 0.18523508)
 texture = ExtResource("7_6ebtb")
 
 [node name="Snow" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(66766, 10663.173)
-scale = Vector2(432.3738, 432.3738)
 motion_scale = Vector2(1.5, 1.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Snow"]
-position = Vector2(-153.0944, -23.348253)
-scale = Vector2(0.008349737, 0.008197267)
+position = Vector2(567.9242, 557.8719)
+scale = Vector2(3.6501641, 5.1101117)
 texture = ExtResource("5_xjeuy")
+
+[node name="score" type="Label" parent="ParallaxBackground"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -560.0
+offset_top = 230.0
+offset_right = -287.0
+offset_bottom = 322.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+vertical_alignment = 1
+script = ExtResource("6_xjeuy")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_uwkpl")
@@ -112,23 +127,6 @@ polygon = PackedVector2Array(2, 1, 149, 0, 284, -4, 408, -11, 622, -8, 714, -26,
 script = ExtResource("3_oeudc")
 coal_scene = ExtResource("4_q25p4")
 gift_scene = ExtResource("5_iux6t")
-
-[node name="score" type="Label" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 16.0
-offset_top = 554.0
-offset_right = 289.0
-offset_bottom = 646.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-vertical_alignment = 1
-script = ExtResource("6_xjeuy")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 45.0
