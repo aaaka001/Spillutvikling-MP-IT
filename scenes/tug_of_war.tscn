@@ -66,4 +66,8 @@ shape = SubResource("RectangleShape2D_hspvn")
 position = Vector2(590, 335)
 shape = SubResource("RectangleShape2D_hspvn")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(568, 328)
+zoom = Vector2(1.7, 1.7)
+
 [connection signal="area_shape_entered" from="Area2D2" to="TextureRect/Sprite2D" method="_on_area_2d_2_area_shape_entered"]
