@@ -26,9 +26,9 @@ horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 597.0
-offset_top = 800.0
-offset_right = 1383.0
-offset_bottom = 1019.0
+offset_left = 599.0
+offset_top = 802.0
+offset_right = 1385.0
+offset_bottom = 1021.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
