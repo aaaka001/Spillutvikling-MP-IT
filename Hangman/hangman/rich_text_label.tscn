@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://b68c041pgti1v"]
+
+[ext_resource type="Script" path="res://hangman/rich_text_label.gd" id="2_wrk6h"]
+
+[node name="RichTextLabel" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 19.0
+offset_top = 67.0
+offset_right = 59.0
+offset_bottom = 122.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 386.0
+offset_top = 248.0
+offset_right = 1151.0
+offset_bottom = 297.0
+text = "hello"
+script = ExtResource("2_wrk6h")
