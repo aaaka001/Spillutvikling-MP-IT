@@ -1,5 +1,9 @@
 extends Control
 
+func _ready():
+	var audio = $AudioStreamPlayer
+	audio.stream = load("res://scenes/screens/menu/christmas-443109.mp3")
+	audio.play()
 
 func tug_of_war(event: InputEvent) -> void:
 	if Input.is_action_just_released("press"):
@@ -15,7 +19,9 @@ func hangman(event: InputEvent) -> void:
 	if Input.is_action_just_released("press"):
 		get_tree().change_scene_to_file("res://hangman/hangman.tscn")
 
-
+func diona_spill(event: InputEvent) -> void:
+	if Input.is_action_just_released("press"):
+		get_tree().change_scene_to_file("res://minigame-map-scenes/ParkourLevel.tscn")
 
 func grinch_run(event: InputEvent) -> void:
 	if Input.is_action_just_released("press"):

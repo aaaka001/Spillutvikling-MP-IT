@@ -147,7 +147,7 @@ offset_right = -209.0
 offset_bottom = -14.0
 theme_override_fonts/font = ExtResource("4_dwwh8")
 theme_override_font_sizes/font_size = 22
-text = "Grinch Run"
+text = "build a snowman"
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 layout_mode = 0
@@ -178,7 +178,10 @@ theme_override_fonts/font = ExtResource("4_dwwh8")
 theme_override_font_sizes/font_size = 22
 text = "Present Run"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="gui_input" from="TextureRect7/TextureRect6" to="." method="tug_of_war"]
 [connection signal="gui_input" from="TextureRect/TextureRect2" to="." method="shoot_game"]
 [connection signal="gui_input" from="TextureRect3/TextureRect3" to="." method="hangman"]
 [connection signal="gui_input" from="TextureRect5/TextureRect4" to="." method="grinch_run"]
+[connection signal="gui_input" from="TextureRect2/TextureRect5" to="." method="diona_spill"]

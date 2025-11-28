@@ -20,10 +20,11 @@ func _ready():
 	try_again_button.pressed.connect(_on_redo_pressed)
 
 func _on_menu_pressed():
-	get_tree().change_scene_to_file("res://scenes/screens/menu_screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/minigames_select/selection_screen.tscn")
 
 func _on_quit_pressed():
 	get_tree().quit()
 
 func _on_redo_pressed():
-	level_manager.change_scene_to(level_manager.curent_scene_index)
+	get_tree().change_scene_to_file(tug.previous_scene)
+#	level_manager.change_scene_to(level_manager.curent_scene_index)

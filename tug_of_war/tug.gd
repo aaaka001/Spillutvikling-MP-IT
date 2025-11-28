@@ -8,7 +8,7 @@ var previous_scene: String
 
 func _ready() -> void:
 	previous_scene = get_tree().current_scene.scene_file_path
-	
+
 
 
 func _process(delta: float) -> void:
