@@ -1,0 +1,100 @@
+[gd_scene load_steps=7 format=3 uid="uid://c4c7gr62puloy"]
+
+[ext_resource type="Texture2D" uid="uid://c4b5ecfq2o60k" path="res://scenes/screens/PlayerWin/winbg.png" id="1_takjo"]
+[ext_resource type="Script" uid="uid://cq8hh2sq25bwj" path="res://scenes/screens/PlayerWin/plose.gd" id="2_eptje"]
+[ext_resource type="Texture2D" uid="uid://c7dtefk0l28ld" path="res://scenes/screens/PlayerWin/button.png" id="2_gcloi"]
+[ext_resource type="FontFile" uid="uid://c7ltpxfxcqx6d" path="res://tug_of_war/Minecraft.ttf" id="4_jgkai"]
+[ext_resource type="Texture2D" uid="uid://dxjxq72kk6gvv" path="res://scenes/screens/PlayerWin/label.png" id="5_m8fw7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3316p"]
+atlas = ExtResource("2_gcloi")
+region = Rect2(17, 40, 62, 19)
+
+[node name="Winbg" type="Sprite2D"]
+position = Vector2(825, 436.99997)
+scale = Vector2(0.41666663, 0.35058597)
+texture = ExtResource("1_takjo")
+script = ExtResource("2_eptje")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.6975452, 0.7119343, 0.70831513, 1)
+offset_left = -768.0001
+offset_top = -513.4261
+offset_right = 768.00024
+offset_bottom = 510.5739
+texture = ExtResource("1_takjo")
+
+[node name="QuitButton" type="TextureButton" parent="."]
+offset_left = -117.60003
+offset_top = -42.785442
+offset_right = 119.99995
+offset_bottom = 48.490437
+texture_normal = SubResource("AtlasTexture_3316p")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="QuitButton"]
+layout_mode = 0
+offset_left = 50.400005
+offset_top = 39.933147
+offset_right = 197.40001
+offset_bottom = 81.93315
+theme_override_fonts/font = ExtResource("4_jgkai")
+theme_override_font_sizes/font_size = 28
+text = "Play again"
+
+[node name="QuitButton3" type="TextureButton" parent="."]
+offset_left = -117.60004
+offset_top = 65.60454
+offset_right = 107.99994
+offset_bottom = 154.02812
+texture_normal = SubResource("AtlasTexture_3316p")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="QuitButton3"]
+layout_mode = 0
+offset_left = 72.00001
+offset_top = 37.08078
+offset_right = 219.0
+offset_bottom = 79.08078
+theme_override_fonts/font = ExtResource("4_jgkai")
+theme_override_font_sizes/font_size = 27
+text = "Menu"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+anchors_preset = -1
+anchor_left = -0.004687498
+anchor_top = -0.20330387
+anchor_right = 0.15520848
+anchor_bottom = -0.013888888
+offset_left = -240.00008
+offset_top = -185.44345
+offset_right = 39.99991
+offset_bottom = -21.443459
+texture_normal = ExtResource("5_m8fw7")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.06012173
+anchor_top = 0.20057872
+anchor_right = 0.1815068
+anchor_bottom = 0.34025878
+offset_left = 34.0
+offset_top = 48.0
+offset_right = 123.0
+offset_bottom = 68.0
+scale = Vector2(2.4, 2.52)
+theme_override_fonts/font = ExtResource("4_jgkai")
+theme_override_font_sizes/font_size = 27
+text = "You Lose!"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="QuitButton3" to="." method="menu"]

@@ -4,11 +4,11 @@ var win_detected = preload("res://scenes/screens/PlayerWin/p1win.tscn")
 var clicksp1 = 0
 var clicksp2 = 0
 var winner_name = "" 
-
+var previous_scene: String
 
 func _ready() -> void:
-	pass
-	
+	previous_scene = get_tree().current_scene.scene_file_path
+
 
 
 func _process(delta: float) -> void:
