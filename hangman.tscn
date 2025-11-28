@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://4ldjn4xpln2p"]
+[gd_scene load_steps=13 format=3 uid="uid://4ldjn4xpln2p"]
 
 [ext_resource type="Texture2D" uid="uid://kccgw2h3pmdr" path="res://Hangman/julenisse_init.png" id="1_j8mr7"]
 [ext_resource type="Script" uid="uid://desjt2tp0ruxa" path="res://Hangman/rich_text_label.gd" id="1_w3s1m"]
 [ext_resource type="Script" uid="uid://kil6hqg5rc8" path="res://Hangman/line_edit.gd" id="2_ilscd"]
 [ext_resource type="FontFile" uid="uid://0n0le85hntai" path="res://Font/Minecraft.ttf" id="2_imtdw"]
+[ext_resource type="Script" uid="uid://bdsuoxsjxbo7w" path="res://texture_rect.gd" id="2_j5m8v"]
 [ext_resource type="Script" uid="uid://7jify8j4wcff" path="res://Hangman/healthbar.gd" id="2_od0u0"]
 [ext_resource type="Texture2D" uid="uid://istvt1ns41kd" path="res://Hangman/Skjermbilde_2025-11-18_kl._10.36.06-removebg-preview.png" id="5_j8mr7"]
 [ext_resource type="Script" path="res://sprite_2d.gd" id="6_12a47"]
@@ -50,6 +51,7 @@ offset_top = -1.0
 offset_right = 1148.0
 offset_bottom = 645.0
 texture = ExtResource("1_j8mr7")
+script = ExtResource("2_j5m8v")
 
 [node name="generatedWord" type="RichTextLabel" parent="."]
 layout_mode = 0
