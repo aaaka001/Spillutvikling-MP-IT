@@ -3,6 +3,9 @@ extends Area2D
 @export var slot_id: String = ""
 var is_hovered := false
 
+func _ready():
+	tug.previous_scene = get_tree().current_scene.scene_file_path
+
 func _on_area_entered(area):
 	is_hovered = true
 
