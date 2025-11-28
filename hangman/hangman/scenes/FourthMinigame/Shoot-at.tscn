@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsh6d4nmqru5y"]
+
+[ext_resource type="Texture2D" uid="uid://bw4eroi3hiffw" path="res://scenes/FourthMinigame/sprite_juleting16.png" id="1_uxaee"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ufhs8"]
+size = Vector2(51, 53.5625)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.77864, 5.67165)
+scale = Vector2(0.233131, 0.197894)
+texture = ExtResource("1_uxaee")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, -4.78125)
+shape = SubResource("RectangleShape2D_ufhs8")

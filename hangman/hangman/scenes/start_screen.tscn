@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://dosvm5pmlmtvj"]
+
+[ext_resource type="Script" uid="uid://b6hriu76tm8l4" path="res://scenes/start_screen.gd" id="1_0il33"]
+[ext_resource type="Texture2D" uid="uid://cctoe1gyb0ha4" path="res://scenes/FourthMinigame/snow backgrund.png" id="1_muiib"]
+[ext_resource type="Texture2D" uid="uid://cvt8bh1sl6to7" path="res://scenes/XMAS-ARCADE.png" id="3_dvcos"]
+[ext_resource type="Texture2D" uid="uid://dqdge4ktqouqp" path="res://buttonPhoto.png" id="4_j1h1v"]
+
+[node name="StartScreen" type="Node2D"]
+script = ExtResource("1_0il33")
+
+[node name="SnowBackgrund" type="Sprite2D" parent="."]
+position = Vector2(958.5, 542.303)
+scale = Vector2(6.11182, 8.73069)
+texture = ExtResource("1_muiib")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 808.0
+offset_top = 633.0
+offset_right = 1033.0
+offset_bottom = 675.0
+tooltip_text = "START"
+
+[node name="Startbutton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "START"
+
+[node name="Xmas-arcade" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(103, -367)
+scale = Vector2(0.553385, 0.416016)
+texture = ExtResource("3_dvcos")
+
+[node name="ButtonPhoto" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(108, 0)
+scale = Vector2(0.249023, 0.273438)
+texture = ExtResource("4_j1h1v")
+
+[connection signal="pressed" from="VBoxContainer/Startbutton" to="." method="_on_startbutton_pressed"]
