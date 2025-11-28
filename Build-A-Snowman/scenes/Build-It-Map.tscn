@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ylo6fwxg3gji" path="res://Build-A-Snowman/scenes/right-arm-asset.tscn" id="5_1m1fq"]
 [ext_resource type="PackedScene" uid="uid://bffseslbqyf4q" path="res://Build-A-Snowman/scenes/left-arm-asset.tscn" id="5_t4wf2"]
 [ext_resource type="AudioStream" uid="uid://c0d3ljb43mppy" path="res://Build-A-Snowman/assets/christmas-background-music-434626.mp3" id="6_6oaxw"]
-[ext_resource type="Script" path="res://Build-A-Snowman/scenes/music_button.gd" id="9_nonqj"]
+[ext_resource type="Script" uid="uid://bopee568w26pp" path="res://Build-A-Snowman/scenes/music_button.gd" id="9_nonqj"]
 [ext_resource type="Texture2D" uid="uid://c5e5a0lcv3py4" path="res://Build-A-Snowman/assets/Volume-UI.png" id="10_wc5sn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8jopi"]
