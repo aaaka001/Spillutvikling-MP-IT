@@ -6,6 +6,7 @@ func _ready():
 	var player = get_node("Root")  
 	var timer = get_node("Timer")
 	timer.timeout.connect(Callable(player, "_on_timer_timeout"))
+	Global.register_score_label($ParallaxBackground/score)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

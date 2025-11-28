@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cw5jejiyduyvh"]
+[gd_scene load_steps=19 format=3 uid="uid://cw5jejiyduyvh"]
 
 [ext_resource type="Texture2D" uid="uid://btmmjn113kqlc" path="res://snow backgrund.png" id="1_11cdo"]
 [ext_resource type="Script" uid="uid://cb0yytd5i5bd4" path="res://scenes/minigameScenes/mg_1_map.gd" id="1_gsf6n"]
@@ -11,8 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://bdolquc60bwid" path="res://snow-backgrund_0001_SNOW.png" id="5_xjeuy"]
 [ext_resource type="Texture2D" uid="uid://6awm8kj1n21v" path="res://snow-backgrund_0004_SKY.png" id="6_6ebtb"]
 [ext_resource type="Texture2D" uid="uid://bkt2fuw1m6wm2" path="res://snow-backgrund_0002_MOUNTAINS.png" id="6_12wad"]
-[ext_resource type="Script" uid="uid://dfqox4gcmgokc" path="res://scenes/label.gd" id="6_xjeuy"]
 [ext_resource type="Texture2D" uid="uid://elkbkb01dtbq" path="res://snow-backgrund_0000_TREES.png" id="7_6ebtb"]
+[ext_resource type="Script" uid="uid://b440bmxieiumr" path="res://scenes/minigameScenes/collision_shape_2d_3.gd" id="10_w2g7r"]
+[ext_resource type="Script" uid="uid://iop3gjbjaqc2" path="res://scenes/minigameScenes/collision_shape_2d_2.gd" id="11_laoid"]
+[ext_resource type="Script" uid="uid://dxe6k5b0eb050" path="res://scenes/minigameScenes/Global.gd" id="15_laoid"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4esan"]
 texture = ExtResource("1_11cdo")
@@ -32,13 +34,6 @@ script = ExtResource("1_gsf6n")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(496, 408)
 script = ExtResource("2_q25p4")
-
-[node name="TextureRect" type="TextureRect" parent="."]
-visible = false
-offset_right = 1145.0
-offset_bottom = 643.0
-texture = ExtResource("1_11cdo")
-metadata/_edit_use_anchors_ = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -66,14 +61,14 @@ position = Vector2(11, 11)
 motion_scale = Vector2(0.7, 0.7)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Mountains"]
-position = Vector2(560, 501)
+position = Vector2(560, 532)
 scale = Vector2(4.5, 3.0713036)
 texture = ExtResource("6_12wad")
 
 [node name="Trees" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(3074.56, 500.28)
 scale = Vector2(20.7936, 20.7936)
-motion_scale = Vector2(2, 2)
+motion_scale = Vector2(1.3, 1.3)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Trees"]
 position = Vector2(-116.74554, 1.044552)
@@ -88,6 +83,25 @@ position = Vector2(916.2045, 1034)
 scale = Vector2(3.5910542, 4.1176457)
 texture = ExtResource("5_xjeuy")
 
+[node name="score" type="Label" parent="ParallaxBackground"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -539.0
+offset_top = -332.0
+offset_right = -266.0
+offset_bottom = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9685872, 5.679429e-06, 7.70092e-07, 1)
+theme_override_font_sizes/font_size = 30
+text = "Score: "
+vertical_alignment = 1
+script = ExtResource("15_laoid")
+metadata/_edit_use_anchors_ = true
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-67, 89)
 tile_set = SubResource("TileSet_uwkpl")
@@ -101,38 +115,28 @@ position = Vector2(-57, 704)
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1136, -197)
 shape = SubResource("RectangleShape2D_6ebtb")
+script = ExtResource("10_w2g7r")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-12, -72)
 shape = SubResource("RectangleShape2D_6ebtb")
+script = ExtResource("11_laoid")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-5, 6)
 polygon = PackedVector2Array(2, 1, 149, 0, 284, -4, 408, -11, 622, -8, 714, -26, 784, -36, 847, -40, 882, -43, 925, -53, 977, -70, 1030, -87, 1083, -115, 1132, -128, 1131, 22, -2, 24)
+
+[node name="LeftLimit" type="Node2D" parent="StaticBody2D"]
+position = Vector2(-12, -40)
+
+[node name="RightLimit" type="Node2D" parent="StaticBody2D"]
+position = Vector2(1132, -152)
 
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2(-67, 89)
 script = ExtResource("3_oeudc")
 coal_scene = ExtResource("4_q25p4")
 gift_scene = ExtResource("5_iux6t")
-
-[node name="score" type="Label" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -51.0
-offset_top = 643.0
-offset_right = 222.0
-offset_bottom = 735.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-vertical_alignment = 1
-script = ExtResource("6_xjeuy")
-metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 45.0

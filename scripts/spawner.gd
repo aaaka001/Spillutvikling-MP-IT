@@ -2,7 +2,7 @@ extends Node2D
 
 @export var coal_scene: PackedScene
 @export var gift_scene: PackedScene   
-@export var coal_spawn_interval: float = 3.0
+@export var coal_spawn_interval: float = 2.3
 @export var gift_spawn_interval: float = 1.0
 
 
