@@ -14,6 +14,11 @@ func _ready():
 	start_pos = position
 	all_draggables.append(self)
 
+func _exit_tree():
+	if self in all_draggables:
+		all_draggables.erase(self)
+
+
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		dragging = event.pressed
