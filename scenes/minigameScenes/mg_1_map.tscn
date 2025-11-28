@@ -33,8 +33,6 @@ script = ExtResource("1_gsf6n")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(496, 408)
-limit_left = 0
-limit_right = 1100
 script = ExtResource("2_q25p4")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -127,12 +125,6 @@ script = ExtResource("11_laoid")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-5, 6)
 polygon = PackedVector2Array(2, 1, 149, 0, 284, -4, 408, -11, 622, -8, 714, -26, 784, -36, 847, -40, 882, -43, 925, -53, 977, -70, 1030, -87, 1083, -115, 1132, -128, 1131, 22, -2, 24)
-
-[node name="LeftLimit" type="Node2D" parent="StaticBody2D"]
-position = Vector2(-12, -40)
-
-[node name="RightLimit" type="Node2D" parent="StaticBody2D"]
-position = Vector2(1132, -152)
 
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2(-67, 89)
