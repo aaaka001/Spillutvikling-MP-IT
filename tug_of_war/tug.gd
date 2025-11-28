@@ -1,6 +1,6 @@
 extends Sprite2D
 
-var win_detected = preload("res://scenes/screens/PlayerWin/p1win.tscn")
+var win_detected = preload("res://ResultScreens/scenes/victory-screen.tscn")
 var clicksp1 = 0
 var clicksp2 = 0
 var winner_name = "" 
@@ -26,9 +26,12 @@ func _on_area_2d_2_area_entered(area: Area2D) -> void:
 	get_tree().change_scene_to_packed(win_detected)
 	
 	if area.name == "p2":
+		clicksp1 = 0
 		winner_name = "Player 1"
 		print("p1 win")
 		
 	if area.name == "p1":
+		clicksp1 = 0
+		clicksp2
 		winner_name = "Player 2"
 		print("p2 win")
