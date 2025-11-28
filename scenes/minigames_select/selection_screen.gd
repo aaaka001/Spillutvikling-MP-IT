@@ -21,7 +21,7 @@ func hangman(event: InputEvent) -> void:
 
 func diona_spill(event: InputEvent) -> void:
 	if Input.is_action_just_released("press"):
-		get_tree().change_scene_to_file("res://minigame-map-scenes/ParkourLevel.tscn")
+		get_tree().change_scene_to_file("res://Build-A-Snowman/scenes/How-To-Play.tscn")
 
 func grinch_run(event: InputEvent) -> void:
 	if Input.is_action_just_released("press"):

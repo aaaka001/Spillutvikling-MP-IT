@@ -22,6 +22,7 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_2_area_entered(area: Area2D) -> void:
+	tug.previous_scene = get_tree().current_scene.scene_file_path
 	get_tree().change_scene_to_packed(win_detected)
 	
 	if area.name == "p2":
