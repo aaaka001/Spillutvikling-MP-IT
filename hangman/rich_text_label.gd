@@ -24,9 +24,9 @@ func _process(delta: float) -> void:
 	
 	if text == selected_word:
 		guessed == true
-		get_tree().change_scene_to_file("res://scenes/screens/PlayerWin/p1win.tscn")
+		get_tree().change_scene_to_file("res://ResultScreens/scenes/victory-screen.tscn")
 	if liv == 0:
-		get_tree().change_scene_to_file("res://scenes/screens/PlayerWin/plose.tscn")
+		get_tree().change_scene_to_file("res://ResultScreens/scenes/defeat-screen.tscn")
 		
 
 
