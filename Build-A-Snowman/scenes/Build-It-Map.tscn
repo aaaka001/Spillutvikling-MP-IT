@@ -23,6 +23,7 @@ atlas = ExtResource("10_wc5sn")
 region = Rect2(106.212585, 263.45758, 632.0222, 509.98334)
 
 [node name="BuildItMap" type="Node2D"]
+position = Vector2(-5, 10)
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(961, 533)
@@ -32,7 +33,7 @@ texture = ExtResource("1_8jopi")
 [node name="Slots" type="Node2D" parent="."]
 
 [node name="Head - Slot" type="Area2D" parent="Slots"]
-position = Vector2(855.00006, 216.00002)
+position = Vector2(855.00006, 206.00002)
 rotation = -3.1415925
 scale = Vector2(14.433462, -8.328703)
 script = ExtResource("2_1n83p")
@@ -101,7 +102,7 @@ position = Vector2(1559, 893)
 
 [node name="Hat - Asset" parent="Draggables" instance=ExtResource("2_t1u0p")]
 position = Vector2(1690, 176)
-scale = Vector2(2.5387306, 2.5387306)
+scale = Vector2(2.5387306, 2.593513)
 
 [node name="Right-Arm - Asset" parent="Draggables" instance=ExtResource("5_1m1fq")]
 position = Vector2(1318, 178)
@@ -128,6 +129,7 @@ toggle_mode = true
 script = ExtResource("9_nonqj")
 atlas_on = SubResource("AtlasTexture_wc5sn")
 atlas_off = SubResource("AtlasTexture_kfoy2")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="area_entered" from="Slots/Head - Slot" to="Slots/Head - Slot" method="_on_area_entered"]
 [connection signal="area_exited" from="Slots/Head - Slot" to="Slots/Head - Slot" method="_on_area_exited"]
