@@ -1,14 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://couflduugxhfk"]
 
-<<<<<<< HEAD:scenes/minigameScenes/first_mg.tscn
-[ext_resource type="Script" uid="uid://cfqvtg5f7ayk1" path="res://scenes/minigameScenes/character_body_2d.gd" id="1_kg7cr"]
+[ext_resource type="Script" uid="uid://ci4fnam31rfmr" path="res://scenes/minigameScenes/character_body_2d.gd" id="1_kg7cr"]
 [ext_resource type="Texture2D" uid="uid://cpdoectdoa5ba" path="res://Sprit/sprite_00.png" id="2_7y2eh"]
 [ext_resource type="Texture2D" uid="uid://dh6emkpmk0ygs" path="res://Sprit/sprite_04.png" id="2_b0g6v"]
 [ext_resource type="Texture2D" uid="uid://drui5ic7bpjq1" path="res://Sprit/sprite_03 (1).png" id="3_78bx0"]
-=======
-[ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_kg7cr"]
-[ext_resource type="Texture2D" uid="uid://cj6g63gasdsvm" path="res://assets/godot-placeholder.png" id="1_n4hnk"]
->>>>>>> 9626dc1fdefdc23334e19354a5d24023bbbdff47:scenes/Aayan-minigame/first_mg.tscn
 
 [sub_resource type="GDScript" id="GDScript_kg7cr"]
 
@@ -40,11 +35,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vwmhu"]
-<<<<<<< HEAD:scenes/minigameScenes/first_mg.tscn
 size = Vector2(16.731468, 34.172684)
-=======
-size = Vector2(217.248, 200.523)
->>>>>>> 9626dc1fdefdc23334e19354a5d24023bbbdff47:scenes/Aayan-minigame/first_mg.tscn
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kg7cr"]
 size = Vector2(85, 161.5)
@@ -55,18 +46,11 @@ script = SubResource("GDScript_kg7cr")
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_kg7cr")
 
-<<<<<<< HEAD:scenes/minigameScenes/first_mg.tscn
 [node name="Sprite" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(597, 566)
 scale = Vector2(2.125, 2.125)
 sprite_frames = SubResource("SpriteFrames_7y2eh")
 animation = &"walk"
-=======
-[node name="Sprite" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(574, 577)
-scale = Vector2(0.736486, 0.736486)
-texture = ExtResource("1_n4hnk")
->>>>>>> 9626dc1fdefdc23334e19354a5d24023bbbdff47:scenes/Aayan-minigame/first_mg.tscn
 
 [node name="CatchArea" type="Area2D" parent="CharacterBody2D"]
 position = Vector2(1873.2922, 1766.625)
@@ -74,13 +58,8 @@ scale = Vector2(5.098923, 5.098923)
 collision_layer = 4
 collision_mask = 3
 
-<<<<<<< HEAD:scenes/minigameScenes/first_mg.tscn
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/CatchArea"]
 position = Vector2(-250.30623, -237.23146)
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Sprite/CatchArea"]
-position = Vector2(4.07343, -17.4357)
->>>>>>> 9626dc1fdefdc23334e19354a5d24023bbbdff47:scenes/Aayan-minigame/first_mg.tscn
 shape = SubResource("RectangleShape2D_vwmhu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
