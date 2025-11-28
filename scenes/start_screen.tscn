@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dosvm5pmlmtvj"]
 
-[ext_resource type="Script" path="res://scenes/start_screen.gd" id="1_0il33"]
+[ext_resource type="Script" uid="uid://b6hriu76tm8l4" path="res://scenes/start_screen.gd" id="1_0il33"]
 [ext_resource type="Texture2D" uid="uid://cctoe1gyb0ha4" path="res://scenes/FourthMinigame/snow backgrund.png" id="1_muiib"]
 [ext_resource type="Texture2D" uid="uid://cvt8bh1sl6to7" path="res://scenes/XMAS-ARCADE.png" id="3_dvcos"]
 [ext_resource type="Texture2D" uid="uid://dqdge4ktqouqp" path="res://buttonPhoto.png" id="4_j1h1v"]
