@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://istvt1ns41kd"
-path="res://.godot/imported/Skjermbilde_2025-11-18_kl._10.36.06-removebg-preview.png-8a3cc686ac2f3b89433b828d95675746.ctex"
+path="res://.godot/imported/Skjermbilde_2025-11-18_kl._10.36.06-removebg-preview.png-e6b7a3e4c96d89648e708fafd03ed9bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hangman/Skjermbilde_2025-11-18_kl._10.36.06-removebg-preview.png"
-dest_files=["res://.godot/imported/Skjermbilde_2025-11-18_kl._10.36.06-removebg-preview.png-8a3cc686ac2f3b89433b828d95675746.ctex"]
+source_file="res://Hangman/Skjermbilde_2025-11-18_kl._10.36.06-removebg-preview.png"
+dest_files=["res://.godot/imported/Skjermbilde_2025-11-18_kl._10.36.06-removebg-preview.png-e6b7a3e4c96d89648e708fafd03ed9bb.ctex"]
 
 [params]
 

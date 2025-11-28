@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch1qxl461mimb"
-path="res://.godot/imported/popup.jpg-30a28181b7e04212240edf056d766168.ctex"
+path="res://.godot/imported/popup.jpg-a1826f088c8d5f2d8e0833c804efdbd0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hangman/popup.jpg"
-dest_files=["res://.godot/imported/popup.jpg-30a28181b7e04212240edf056d766168.ctex"]
+source_file="res://Hangman/popup.jpg"
+dest_files=["res://.godot/imported/popup.jpg-a1826f088c8d5f2d8e0833c804efdbd0.ctex"]
 
 [params]
 

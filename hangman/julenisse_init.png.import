@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kccgw2h3pmdr"
-path="res://.godot/imported/julenisse_init.png-16fda1445d90eb4a9d1ef3aeafda2750.ctex"
+path="res://.godot/imported/julenisse_init.png-f6b1c7ed2906ba2e1c6c999c4e38ac57.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hangman/julenisse_init.png"
-dest_files=["res://.godot/imported/julenisse_init.png-16fda1445d90eb4a9d1ef3aeafda2750.ctex"]
+source_file="res://Hangman/julenisse_init.png"
+dest_files=["res://.godot/imported/julenisse_init.png-f6b1c7ed2906ba2e1c6c999c4e38ac57.ctex"]
 
 [params]
 
