@@ -10,7 +10,7 @@ func _physics_process(delta):
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	Minigame4.update_points(1)
+#	Minigame4.update_points(1)
 	body.queue_free()
 	queue_free()
 

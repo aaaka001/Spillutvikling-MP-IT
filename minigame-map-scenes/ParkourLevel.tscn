@@ -31,6 +31,8 @@ scale = Vector2(1.307, 1.307)
 position = Vector2(492.3462, -255.49219)
 scale = Vector2(1.0000001, 1.0000001)
 limit_top = -500
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
 
 [node name="Grinch" parent="." instance=ExtResource("2_qg6j6")]
 z_index = 200

@@ -17,8 +17,8 @@ func _process(delta: float) -> void:
 
 
 func _on_menu_pressed() -> void:
-	get_tree().change_scene_to_file("res://blablabla.tscn")
+	get_tree().change_scene_to_file("res://scenes/minigames_select/selection_screen.tscn")
 
 
 func _on_play_again_pressed() -> void:
-	get_tree().change_scene_to_file("res://tug_of_war/tug_of_war.tscn")
+	get_tree().change_scene_to_file(tug.previous_scene)
