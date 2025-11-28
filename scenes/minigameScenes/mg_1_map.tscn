@@ -25,25 +25,23 @@ tile_size = Vector2i(128, 128)
 sources/1 = SubResource("TileSetAtlasSource_4esan")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ebtb"]
-size = Vector2(14, 164)
+size = Vector2(20, 500)
 
 [node name="MG1_MAP" type="Node2D"]
 position = Vector2(78, -78)
 script = ExtResource("1_gsf6n")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(496, 408)
+position = Vector2(884, 614)
 script = ExtResource("2_q25p4")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(66777, 10674.173)
-scale = Vector2(432.3738, 432.3738)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
-position = Vector2(-152.99031, -23.933395)
-scale = Vector2(0.015591153, 0.016850699)
+position = Vector2(946.34174, 529.8093)
+scale = Vector2(7.150692, 13.6634245)
 texture = ExtResource("6_6ebtb")
 
 [node name="Clouds" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -52,8 +50,8 @@ scale = Vector2(4.56, 4.56)
 motion_scale = Vector2(0.55, 0.55)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Clouds"]
-position = Vector2(3.0701752, 2.4122806)
-scale = Vector2(0.80200297, 1.218391)
+position = Vector2(89.25439, 28.728073)
+scale = Vector2(1.3430308, 2.0378177)
 texture = ExtResource("2_oeudc")
 
 [node name="Mountains" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -61,8 +59,8 @@ position = Vector2(11, 11)
 motion_scale = Vector2(0.7, 0.7)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Mountains"]
-position = Vector2(560, 532)
-scale = Vector2(4.5, 3.0713036)
+position = Vector2(937, 937)
+scale = Vector2(6.173901, 4.876522)
 texture = ExtResource("6_12wad")
 
 [node name="Trees" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -71,28 +69,28 @@ scale = Vector2(20.7936, 20.7936)
 motion_scale = Vector2(1.3, 1.3)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Trees"]
-position = Vector2(-116.74554, 1.044552)
-scale = Vector2(0.1394118, 0.18523508)
+position = Vector2(-99.047775, 16.33772)
+scale = Vector2(0.24051678, 0.31957227)
 texture = ExtResource("7_6ebtb")
 
 [node name="Snow" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(-335, -459)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Snow"]
-position = Vector2(916.2045, 1034)
-scale = Vector2(3.5910542, 4.1176457)
+position = Vector2(1287.3416, 1392.5)
+scale = Vector2(6.1124744, 7.5)
 texture = ExtResource("5_xjeuy")
 
 [node name="score" type="Label" parent="ParallaxBackground"]
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -539.0
-offset_top = -332.0
-offset_right = -266.0
-offset_bottom = -240.0
+anchor_right = 0.55364585
+anchor_bottom = 0.52685183
+offset_left = -912.0
+offset_top = -526.0
+offset_right = -639.0
+offset_bottom = -434.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.9685872, 5.679429e-06, 7.70092e-07, 1)
@@ -107,24 +105,26 @@ position = Vector2(-67, 89)
 tile_set = SubResource("TileSet_uwkpl")
 
 [node name="Root" parent="." instance=ExtResource("2_gsf6n")]
-position = Vector2(-66, 55)
+position = Vector2(-207, -1)
+scale = Vector2(1.71, 1.71)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-57, 704)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1136, -197)
+position = Vector2(1889, -54)
 shape = SubResource("RectangleShape2D_6ebtb")
 script = ExtResource("10_w2g7r")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-12, -72)
+position = Vector2(-12, 169)
 shape = SubResource("RectangleShape2D_6ebtb")
 script = ExtResource("11_laoid")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2(-5, 6)
-polygon = PackedVector2Array(2, 1, 149, 0, 284, -4, 408, -11, 622, -8, 714, -26, 784, -36, 847, -40, 882, -43, 925, -53, 977, -70, 1030, -87, 1083, -115, 1132, -128, 1131, 22, -2, 24)
+position = Vector2(-23.000002, 409.99997)
+scale = Vector2(1.694775, 1.6036185)
+polygon = PackedVector2Array(2, 1, 149, 0, 284, -4, 408, -11, 621.3215, -17.46051, 714, -26, 784, -36, 847, -40, 882, -43, 925, -53, 977, -70, 1030, -87, 1083, -115, 1132, -128, 1131, 22, 676.4497, 22.802368, -2, 24)
 
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2(-67, 89)

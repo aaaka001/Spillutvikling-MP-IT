@@ -23,13 +23,16 @@ tile_size = Vector2i(128, 128)
 sources/1 = SubResource("TileSetAtlasSource_4esan")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ebtb"]
-size = Vector2(14, 164)
+size = Vector2(14, 388)
 
 [node name="MG1_MAP" type="Node2D"]
+position = Vector2(349, 161)
 script = ExtResource("1_gsf6n")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(567, 318)
+position = Vector2(613, 374)
+zoom = Vector2(1, 1.03)
+limit_enabled = false
 script = ExtResource("2_q25p4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -41,49 +44,41 @@ texture = ExtResource("1_11cdo")
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(66766, 10663.173)
-scale = Vector2(432.3738, 432.3738)
+position = Vector2(349, 161)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
-position = Vector2(-152.99031, -23.933395)
-scale = Vector2(0.015591153, 0.016850699)
+position = Vector2(609.3707, 307.8046)
+scale = Vector2(7.258786, 13.390803)
 texture = ExtResource("6_6ebtb")
 
 [node name="Clouds" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(551, 88)
+position = Vector2(900, 249)
 scale = Vector2(4.56, 4.56)
 motion_scale = Vector2(0.55, 0.55)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Clouds"]
-position = Vector2(3.0701752, 2.4122806)
-scale = Vector2(0.80200297, 1.218391)
+position = Vector2(1.5468674, -20.816177)
+scale = Vector2(1.311325, 2.2064586)
 texture = ExtResource("2_oeudc")
 
 [node name="Mountains" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(349, 161)
 motion_scale = Vector2(0.7, 0.7)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Mountains"]
-position = Vector2(560, 501)
-scale = Vector2(4.5, 3.0713036)
+position = Vector2(612.8723, 710)
+scale = Vector2(7.255592, 4.3617387)
 texture = ExtResource("6_12wad")
 
 [node name="Trees" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(3063.56, 489.28)
+position = Vector2(3412.56, 650.27997)
 scale = Vector2(20.7936, 20.7936)
-motion_scale = Vector2(2, 2)
+motion_scale = Vector2(1.2, 1.2)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Trees"]
-position = Vector2(-116.74554, 1.044552)
-scale = Vector2(0.1394118, 0.18523508)
+position = Vector2(-114.78582, 7.4110985)
+scale = Vector2(0.2161063, 0.28713828)
 texture = ExtResource("7_6ebtb")
-
-[node name="Snow" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(1.5, 1.5)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Snow"]
-position = Vector2(567.9242, 557.8719)
-scale = Vector2(3.6501641, 5.1101117)
-texture = ExtResource("5_xjeuy")
 
 [node name="score" type="Label" parent="ParallaxBackground"]
 anchors_preset = 8
@@ -91,37 +86,48 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -560.0
-offset_top = 230.0
-offset_right = -287.0
-offset_bottom = 322.0
+offset_left = -211.0
+offset_top = 391.0
+offset_right = 62.0
+offset_bottom = 483.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 vertical_alignment = 1
 script = ExtResource("6_xjeuy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Snow" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(1.5, 1.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Snow"]
+position = Vector2(511.03204, 732.9359)
+scale = Vector2(7.9361024, 7.290351)
+texture = ExtResource("5_xjeuy")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_uwkpl")
 
 [node name="Root" parent="." instance=ExtResource("2_gsf6n")]
-position = Vector2(1, -34)
+position = Vector2(-439.00006, -311.00003)
+scale = Vector2(1.72, 1.72)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(10, 615)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1136, -197)
+position = Vector2(1573, -128)
 shape = SubResource("RectangleShape2D_6ebtb")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-12, -72)
+position = Vector2(-323, 45)
 shape = SubResource("RectangleShape2D_6ebtb")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2(-5, 6)
-polygon = PackedVector2Array(2, 1, 149, 0, 284, -4, 408, -11, 622, -8, 714, -26, 784, -36, 847, -40, 882, -43, 925, -53, 977, -70, 1030, -87, 1083, -115, 1132, -128, 1131, 22, -2, 24)
+position = Vector2(-372.42102, 224.31447)
+scale = Vector2(1.664462, 1.574392)
+polygon = PackedVector2Array(2, 1, 149, 0, 284, -4, 403.47623, -17.639404, 611.5305, -20.971924, 714, -26, 759.0567, -30.052551, 847, -40, 882, -43, 914.66254, -46.566833, 953.7142, -51.013, 1011.9913, -56.729492, 1100.3081, -72.60864, 1165.7947, -103.73175, 1131, 22, -2, 24)
 
 [node name="Spawner" type="Node2D" parent="."]
 script = ExtResource("3_oeudc")

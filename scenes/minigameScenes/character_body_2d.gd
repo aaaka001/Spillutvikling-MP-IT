@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@export var speed = 400
-@export var jump_velocity: float = -300.0
+@export var speed = 900
+@export var jump_velocity: float = -500.0
 @export var gravity: float = 800.0
 var held_gifts: int = 0
 var catch_area: Area2D
