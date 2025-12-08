@@ -8,3 +8,4 @@ func _on_button_pressed() -> void:
 
 	if click_count >= max_clicks:
 		get_tree().change_scene_to_file("res://scenes/screens/victory_screen.tscn")
+ 
