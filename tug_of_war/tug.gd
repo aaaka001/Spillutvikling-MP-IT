@@ -13,8 +13,8 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_released("p1pull"):
-		position.x -= 15
-		clicksp1 += 1
+		position.x -= 15 #drar hverandre
+		clicksp1 += 1 #teller clicks
 	if Input.is_action_just_released("p2pull"):
 		position.x += 15
 		clicksp2 += 1
@@ -22,16 +22,19 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_2_area_entered(area: Area2D) -> void:
-	tug.previous_scene = get_tree().current_scene.scene_file_path
-	get_tree().change_scene_to_packed(win_detected)
+	tug.previous_scene = get_tree().current_scene.scene_file_path 
+	get_tree().change_scene_to_packed(win_detected) #win deteced er path den bytter til når noen winner
 	
 	if area.name == "p2":
+		clicksp2 = 0
 		clicksp1 = 0
+		print(clicksp2)
 		winner_name = "Player 1"
 		print("p1 win")
 		
 	if area.name == "p1":
+		clicksp2 = 0
 		clicksp1 = 0
-		clicksp2
+		print(clicksp2)
 		winner_name = "Player 2"
 		print("p2 win")

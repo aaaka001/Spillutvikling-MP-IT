@@ -9,6 +9,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	self.text = str(tug.clicksp2)
+#variabel for å tracke antall ganger trykket
 
 	
 	

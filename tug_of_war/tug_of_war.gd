@@ -8,4 +8,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	Label.text = str(tug.clicksp1)
+	Label.text = str(tug.clicksp1) #henter global variablen som tracka hvor mange clicks spilleren har gjort
